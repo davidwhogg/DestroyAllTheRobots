@@ -1,0 +1,205 @@
+\documentclass{article}
+
+% typesetting and text macros
+\usepackage[letterpaper, textheight=9.0in, textwidth=5.5in]{geometry}
+\usepackage{setspace}
+\setstretch{1.08}
+\sloppy\sloppypar\raggedbottom\frenchspacing
+\newcommand{\documentname}{\textsl{white paper}}
+\newcommand{\paragraphskip}{\medskip}
+\renewcommand{\paragraph}[1]{\par\paragraphskip\noindent\textbf{#1}}
+
+\title{\bfseries Why do we do astrophysics?}
+\author{\textbf{David W. Hogg}\footnote{%
+David W. Hogg is in the Center for Cosmology and Particle Physics, Department of Physics, New York University; and in the Center for Computational Astronomy, Flatiron Institute; and at the Max-Planck-Institut f\"ur Astronomie, Heidelberg.}~\footnote{%
+The author thanks
+  Mike Blanton (Carnegie),
+  Gaby Contardo (Nova Gorica),
+  Juna Kollmeier (Carnegie),
+  Phil Marshall (SLAC),
+  Hans-Walter Rix (MPIA),
+  and
+  Kate Storey-Fisher (Stanford) for discussions that informed this \documentname.
+  The Flatiron Institute is a division of the Simons Foundation.}}
+\date{December 2025}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}\label{sec:intro}
+This document is being written at a moment of very rapid change.
+What are currently called ``large language models'' (LLMs)---%
+or sometimes ``generative artificial intelligence'' (although I really don't like that)---%
+can now design, plan, execute, write up, and referee astrophysics projects.
+At time of writing, one scientific-paper-by-LLM project has already been published \cite{genario} and I expect more in the category to follow.
+There are already conferences being set up in which all the papers are written, and all the refereeing is performed, by machines \cite{conference}.
+This \documentname{} is inspired by this very rapid change.
+
+There is another change happening in astrophysics, however, that is happening on a much longer time scale, but which is relevant:
+Astronomical data production is becoming extremely professionalized, and in a very particular way.
+An extreme example is the ESA \textsl{Gaia} Mission \cite{gaia}:
+Once the instrument was designed, the plans were moved inside the fence\footnote{I am using the phrase ``inside the fence'' to mean ``accessible only to those with governmental approval to work on weapons systems, that is, those with security clearances.''} at EADS, the European military contractor.
+EADS then figured out how to build it, built it, launched it, and operated it.
+No research-active astronomers were involved in any part of that operation; indeed even the scientific members of the \textsl{Gaia} Data Processing and Analysis Consortium (DPAC; \cite{dpac}) are in the position of having to reverse engineer the algorithms that made the on-board decisions (on the \textsl{Gaia} spacecraft) about what to window and telemeter to ground.
+Don't get me wrong: \textsl{Gaia} has been incredibly important to global astrophysics (and my own research program); it is probably the most productive astrophysics space mission in science-per-dollar terms in the last decade; but it wasn't built or operated by \emph{astronomers}.\footnote{I will use the words ``astronomer'' and ``astrophysicist'' almost interchangeably here. For me the distinction is soft, and related to \emph{intentions}: Astronomers want to measure things in the sky precisely. Astrophysicists want to derive physical insights from those measurements. Most of us do a bit of both (I hope). Both astronomers and astrophysicists contribute to and criticize the scientific literature. One could object to my claim that \textsl{Gaia} was not built by astronomers by saying that any employee of EADS who works on \textsl{Gaia} is obviously an astronomer: They built a telescope! But they are not astronomers in the sense of contributing to and criticizing the astronomical literature. Indeed, most employees at EADS are not permitted to discuss their work in public, because their work relates to weapons systems.}
+The \textsl{Gaia} Mission is an extreme example, but many large projects are in this category, in one way or another:
+Most of the NASA \textsl{JWST} \cite{jwst} instruments were built and delivered by defense contractors; the enormous \textsl{LSST} project \cite{lsst} is being operated by a team of professionals; even university-based projects like the \textsl{Sloan Digital Sky Survey} projects \cite{sdss4, sdss5} or \textsl{GALAH} \cite{galah} endeavor to produce science-ready data products that can be queried through application programming interfaces (APIs), plotted, and analyzed without much worry about where they came from or how they got here.
+
+I have been involved in bringing about this change (for example, \cite{monitor, astrometrynet, opendata}), and in many ways it is absolutely great.
+It democratizes astronomy, since it lowers barriers to entry.
+It creates an open-science space, in which every project benefits from the output of every other project.
+It makes it very easy to make discoveries, and especially discoveries that involve multiple data modalities.
+It thus weakened the walls of the astronomical silos (``radio astronomer,'' ``spectroscopist,'' etc), and especially blurred the distinctions between the categories of ``theorist'' and ``observer.''
+But it does have a strange consequence, which is also related to professionalization:
+For some kinds of projects in astrophysics, there isn't a huge difference in capability between a classically trained astronomer and a newly trained \emph{data scientist}.
+Indeed, in many ways, the data scientist is better prepared to work in astronomy than the astronomer, since the data scientist knows how to do fast computation on large data sets, build complex probabilistic models, and perform large-scale optimizations or searches.
+For analysis of the \textsl{Gaia} data, a data scientist who has taken an astronomy class might be better prepared than an astronomer who has taken a data science class.
+
+How are these two changes---LLM successes and the data-scientification---related?
+They are related because contemporary \emph{LLMs can do data science}.
+It's true that there are many known limitations of present-day LLMs, for example in doing arithmetic \cite{arithmetic}, or in performing causal inferences \cite{causal}, but the models are improving by the week, and I think it is reasonable to expect that they will steadily become more competent at designing, executing, writing up, and criticizing scientific projects, at least for a while.
+There might be show-stoppers; we don't know yet.
+But this \documentname{} is being written under the assumption that LLM-like models (or ``genAI'') will improve with time until they can perform data science tasks with the same proficiency as humans.
+What does the study of astrophysics look like in this future?
+I don't know; this \documentname{} isn't even going to answer that.
+All I am going to ask is: Why do we do astrophysics?
+I have the strong feeling that we will need to answer this question first, before we can answer questions about our relationships with LLMs and LLM-based projects.
+
+\section{Points of agreement}\label{sec:facts}
+We'll start here by stating some facts about astrophysics, or points on which we can all agree.
+Of course for each of these, there are many astrophysicists who will disagree.
+But these form a set of assumptions from which I will try to flow any recommendations I might make.
+
+\paragraph{The goal of astrophysics is to learn new things about the Universe.}
+Astrophysics is a science that is driven by discovery and new measurement.
+Every PhD project and (almost) every paper involves measuring something that hasn't been measured before, or in a different way, or making a new interpretation or prediction, or finding a new object or set of objects.
+That is, every project that counts as ``astrophysics'' involves scientific novelty.
+If you want to become an astrophysicist, it isn't sufficient to read about it, or take classes in it.
+You have to \emph{do it}, and \emph{doing it} requires doing new things, that haven't been done before, and which connect to important scientific questions in the literature.
+
+It isn't even sufficient to repeat classic or known measurements.
+Part of becoming an astrophysicist is learning how to design and plan new kinds of measurements or new approaches or applying known techniques in new areas to make new discoveries.
+Astrophysics lives at the cutting edge,\footnote{I owe a lot to Rosie Wyse (JHU), in general, but also in particular for making this point very clearly to me in a conversation in 2023.} not in the past.
+
+\paragraph{People are always the ends, and never the means.}
+It might sound trite to say that we do astrophysics for people.
+But the consequences of this are at least a little bit non-trivial:
+When we employ a graduate student to perform some work, it absolutely must be because the graduate student will benefit from that work, not because that work needs to get done.
+This is one of the interpretations of the categorical imperative \cite{kant}, which is (to my mind) one of the few undeniably true things that have been written in the philosophical subject of ethics.
+
+I have heard it said, more than once, that an LLM can do some task ``better than a graduate student.''\footnote{One memorable occasion was Paco Villaescusa (Flatiron) saying this, publicly, in a room full of graduate students, during a seminar in the Department of Physics at New York University in 2025.}
+That language makes me uncomfortable, because it is taking an extremely \emph{instrumental} view of graduate students.
+Are graduate students in our business \emph{to do work}?
+Or are they here \emph{to learn}?
+I very much hope the latter.
+We train PhD students not to amplify our own research programs, but to create opportunities, and opportunities for them.
+In general, it is possible to take a very instrumental view of the world, in which people are described in terms of their functions---their input--output relationships, if you will---and this is the view of the world I often see reflected in the press releases of robotics and artificial-intelligence companies.
+It is important that we reject this view.
+Every person is a human being, whose personal development is far more important than any of our scientific accomplishments.
+
+You might object: But science is \emph{also} important!
+It is, perhaps, but see below my point about clinical value.
+If a science does not have clinical value (no way to help people), then its results are definitely and absolutely less important than its people.
+If a science \emph{does} have clinical value, I still think this is true, but I would be willing to be debated on it.
+You might notice that I am not a \emph{utilitarian}, but I am willing to listen to utilitarian arguments.
+
+One interesting possible consequence of this point---the point that people are the ends, not the means---is that the standard form for research proposals might be unethical:
+Research funding in those proposals pays for graduate students, with the explicit promise of deliverables from those students.
+When it's crunch time, are we obeying the categorical imperative?
+Another interesting possible consequence is that \emph{scientific embargoes might be unethical}.
+After all, how does stopping early-career scientists from talking publicly about their work serve \emph{their} interests?
+
+\paragraph{Astrophysics is (roughly) the astrophysics literature.}
+My group is, in some sense, a software group.
+We produce software systems that many people use (for example, \cite{astrometrynet, emcee}).
+For this reason, I am occasionally asked to speak on the idea that software is just as important as other kinds of scientific outputs.
+People are surprised when I don't completely agree.
+I believe that (in astrophysics) software is written to support the astrophysics literature, and that every important piece of software should have an associated paper in the astrophysics literature.
+That paper describes the intellectual contributions encoded in the software, and provides a standardized mechanism for tracing intellectual provenance, giving credit, and criticism.
+Maybe my position is radical now?
+But I believe that software is important in that it embodies and executes \emph{our ideas and beliefs} about astrophysics.
+These ideas and beliefs are well gathered, disseminated, and preserved in the astrophysics literature.\footnote{%
+I should say here that I take the dissemination and preservation aspects of the literature more seriously than any other aspects.
+For this reason, I believe that \textsl{arXiv} is every bit as important as \textit{The Astrophysical Journal}.
+However, I believe that entities like \textit{The Open Journal of Astronomy} don't contribute much, since they are neither a disseminator nor a preserver of literature.}
+
+Nothing we have has the track record that the traditional journals do for long-term dissemination and preservation of knowledge; we don't know what computing hardware platforms we will have in 15 years, let alone 200, but I can pretty-much guarantee that---if human civilization is still in existence---we will still be able to read Vera Rubin's papers about the dark matter (for example, \cite{vera}).\footnote{%
+One super-weird thing that is definitely off-topic here is that the journals no longer have print (hard-copy) form.
+It used to be (when I was a PhD student) that every published scientific paper had a printed copy, on acid-free paper, in almost every academic library in the world (literally thousands of copies, well tended).
+Now there are as many copies of an astronomical paper as the main journals have backups.
+How many is that? Three?
+We are one small-scale war away from losing everything that astronomers have done this entire century.
+That's why my example paper is Vera Rubin's, not any of mine.}
+
+But that's all just introduction to the main point here, which is that astrophysics \emph{is} the astrophysics literature.
+If you want to ask ``what is known about the structure of neutron stars?'' you ask the literature (scientific articles plus sometimes textbook chapters).
+Even if you ask a person, that person justifies their answer by pointing to the literature.
+If an astronomer measures something, but never publishes that measurement, then that measurement does not get disseminated, known, and preserved.
+It does not become part of astrophysics.
+That is, the literature is the repository of all of our knowledge and the only reliable authority.
+
+I will make two small comments about this.
+The first is that astrophysics, like any science, contains a lot of ``implicit knowledge'' or folklore about things like how to observe, how to reduce data, how to organize projects, how to visualize data and models, how to read and write, and so on.
+Much of this never appears in the literature.
+Is that not also astrophysics?
+Yes it is, but it is \emph{astrophysics practice}.\footnote{I would welcome a project in which we tried to make much of this implicit knowledge explicit.}
+The results of astrophysics---the scientific conclusions and debates---are in the literature.
+
+The second comment is that I often hear software (and hardware and engineering-oriented) people say that they ``have to'' write papers because papers---and the citations that they generate---are ``the coin of the realm.''
+Papers (and authorships on papers) and citations are not ``coin'' of anything!
+They represent our recording of what happened, what we know, and how we know it.
+Citations deliver provenance, not reward.\footnote{%
+The authors on a paper should be those responsible for creating the results described in that paper.
+Papers should cite the papers that are relevant to their results---the papers they are criticizing or building on.
+Anything else unethically distorts the provenance of the ideas and work in our field.}
+The literature records what we know and how we know it.
+
+\paragraph{Correctness and rigor are paramount.}
+
+\paragraph{We must use our resources efficiently.}
+
+\paragraph{Astrophysics has no clinical value.}
+I like to say that the sciences have a ``left edge'' which is about fundamental understanding, and understanding for understanding's sake.
+They also mostly have a ``right edge'' which is about clinical value or application or use in the world.
+So, for example, biology has a left edge on which people understand how the cytoskeleton moves the cell, and a right edge in which they develop or improve therapies for cancer or cloudy toenails.
+Macroeconomics has a left edge that involves relationships between unemployment and inflation, and a right edge that informs government policy about interest rates.
+I claim (and maybe this is a bit controversial) that \emph{astronomy has no right edge}.
+That is, there are no useful things in the world that flow from astronomical discoveries and results.
+I have spent years of my life estimating the comoving volume of the Universe \cite{phdthesis}, measuring the local dark-matter density \cite{oti}, and finding planets around other stars \cite{singletransit}.
+No human outcome or pragmatic capability has been affected in the slightest by any of my results.
+Literally nothing helpful to humanity arises here.
+
+I speak about this sometimes, and I hear objections of various kinds.
+One silly objection is that we might find ``Planet B.''
+Nope. We're all dying---and every human who is ever born will be dying---on this rock, or extremely close to it.\footnote{There are many reasons this is true; some of them are discussed in \cite{nospacetravel}. It is also very eloquently stated by Michel Mayor in his acceptance speech for the 2019 Nobel Prize in Physics.}
+A less silly objection is that the results of astrophysics inform particle physics.
+They do!
+We learned about neutrino mass mixing and the entire dark sector from astrophysics, not particle experiments.
+But these astrophysics results inform the \emph{left edge} of particle physics, not the right edge.
+An even less silly objection is that we develop, build, and exercise imagers, cameras, spectrographs, spacecraft platforms and so on, which have right-edge applications.
+All that is true!
+That's the closest we come to having a right edge:
+We contribute to precision remote-sensing technologies, which, in turn, help the US and other nations target weapons.
+Congratulations, astronomy!
+But I don't even count this as clinical use of astronomy, because we build these tools \emph{to do astronomy}, these aren't the \emph{results of astronomy}.
+My point about astronomy having no right edge is that nothing in the world of things or people hangs on the precise value of the age of the Universe.
+Many astronomers have spent many years measuring it, and we know it very precisely \cite{age}.
+But literally nothing hinges on the question of whether it is 13.77 billion years or 13.79.
+So feel free to disagree here, and say ``yes, astronomy does have a right edge; we improve the targeting of weapons.''
+I won't fight you.
+But, for the purposes of my arguments, this won't be the kind of right edge that affects how we do things.
+
+One way to see this is that even if our detectors and satellites were useless to any other industry,
+we wouldn't use them differently, or do anything differently.
+Note the difference with biology: If we found that cancer could not ever be cured with biological resources, all of the study of biology would change overnight.
+After all, much of biology is justified in these right-edge terms.
+None of astrophysics is justified in these right-edge terms.
+No astronomer (that I know) is improving the calibration of \textsl{JWST} instruments because they want the US Navy to have a higher kill rate.
+
+\section{Some comments about how astrophysics works}
+
+\section{Why do we do astrophysics?}\label{sec:why}
+Now it is time to answer the question in the title.
+
+\end{document}
