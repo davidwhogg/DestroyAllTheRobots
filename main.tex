@@ -6,6 +6,7 @@
 \setstretch{1.08}
 \sloppy\sloppypar\raggedbottom\frenchspacing
 \newcommand{\documentname}{\textsl{white paper}}
+\newcommand{\sectionname}{Section}
 \newcommand{\paragraphskip}{\medskip}
 \renewcommand{\paragraph}[1]{\par\paragraphskip\noindent\textbf{#1}}
 
@@ -20,12 +21,21 @@ The author thanks
   Hans-Walter Rix (MPIA),
   and
   Kate Storey-Fisher (Stanford) for discussions that informed this \documentname.
+  I doubt that any of them agree with its content.
   The Flatiron Institute is a division of the Simons Foundation.}}
 \date{December 2025}
 
 \begin{document}
 
 \maketitle
+
+\paragraph{Abstract:}
+At time of writing, large language models (LLMs) are beginning to obtain the ability to design, execute, write up, and referee scientific projects on the data-science side of astrophysics.
+What implications does this have for our profession?
+In this \documentname{},
+I list---and argue for---a set of facts or ``points of agreement'' about what astrophysics is, or should be.
+I discuss a set of putative benefits that astrophysics perhaps brings to us, and to science, and to universities, and to the world.
+I conclude with my take on why astronomy and astrophysics are worth doing, and how LLMs might fit into a practice with that justification.
 
 \section{Introduction}\label{sec:intro}
 This document is being written at a moment of very rapid change.
@@ -101,8 +111,12 @@ Every person is a human being, whose personal development is far more important 
 You might object: But science is \emph{also} important!
 It is, perhaps, but see below my point about clinical value.
 If a science does not have clinical value (no way to help people), then its results are definitely and absolutely less important than its people.
-If a science \emph{does} have clinical value, I still think this is true, but I would be willing to be debated on it.
-You might notice that I am not a \emph{utilitarian}, but I am willing to listen to utilitarian arguments.
+If a science \emph{does} have clinical value, there might be room for debate.
+You might notice that I am not a \emph{utilitarian}, but I am willing to listen to utilitarian arguments.\footnote{%
+Utilitarian arguments balance benefits and harms to people, with the goal of finding the solutions that most increase the ``sum total of human happiness'' \cite{mill}.
+If a science has clinical value, then the harm to workers (of being forced to do things they don't want to do, say, or being underpaid for their work, say), can be balanced by the good done to the recipients of the clinical successes.
+I don't like these arguments, because they are used to justify using people as a means, and not an end.
+But utilitarianism works well with capitalism and development.}
 
 One interesting possible consequence of this point---the point that people are the ends, not the means---is that the standard form for research proposals might be unethical:
 Research funding in those proposals pays for graduate students, with the explicit promise of deliverables from those students.
@@ -126,7 +140,7 @@ However, I believe that entities like \textit{The Open Journal of Astronomy} don
 
 Nothing we have has the track record that the traditional journals do for long-term dissemination and preservation of knowledge; we don't know what computing hardware platforms we will have in 15 years, let alone 200, but I can pretty-much guarantee that---if human civilization is still in existence---we will still be able to read Vera Rubin's papers about the dark matter (for example, \cite{vera}).\footnote{%
 One super-weird thing that is definitely off-topic here is that the journals no longer have print (hard-copy) form.
-It used to be (when I was a PhD student) that every published scientific paper had a printed copy, on acid-free paper, in almost every academic library in the world (literally thousands of copies, well tended).
+It used to be (when I was a PhD student) that every published scientific paper had a printed copy, on acid-free paper, in almost every academic library in the world (literally thousands of copies, globally distributed, and well tended).
 Now there are as many copies of an astronomical paper as the main journals have backups.
 How many is that? Three?
 We are one small-scale war away from losing everything that astronomers have done this entire century.
@@ -146,8 +160,8 @@ Is that not also astrophysics?
 Yes it is, but it is \emph{astrophysics practice}.\footnote{I would welcome a project in which we tried to make much of this implicit knowledge explicit.}
 The results of astrophysics---the scientific conclusions and debates---are in the literature.
 
-The second comment is that I often hear software (and hardware and engineering-oriented) people say that they ``have to'' write papers because papers---and the citations that they generate---are ``the coin of the realm.''
-Papers (and authorships on papers) and citations are not ``coin'' of anything!
+The second comment is that I often hear software (and hardware and engineering-oriented) people say that they ``have to'' write papers because papers---and the citations that they generate---are ``the coin of the realm'' (for example, \cite{coinofrealm}).
+Papers (and the authorships on those papers) and the citations of those papers are not ``coin'' of anything!
 They represent our recording of what happened, what we know, and how we know it.
 Citations deliver provenance, not reward.\footnote{%
 The authors on a paper should be those responsible for creating the results described in that paper.
@@ -155,9 +169,35 @@ Papers should cite the papers that are relevant to their results---the papers th
 Anything else unethically distorts the provenance of the ideas and work in our field.}
 The literature records what we know and how we know it.
 
-\paragraph{Correctness and rigor are paramount.}
-
 \paragraph{We must use our resources efficiently.}
+Partly because we deliver no clinical value (see below), essentially all astrophysics grants and funding are \emph{gifts}.
+Our funding comes from a combination of public purses (national agencies, public universities, national and international observatories and spacecraft) and private sources (foundations, private universities, individual donors).
+I don't understand the motivations of most of these actors, if they can even be described as having motivations at all.
+However, if we squander these funds, the sources will dry up.
+Perhaps more importantly, when the source of our funding or support is public, we owe it to the people represented by that public entity to use their contributions wisely and well.
+Even with private funding, the source is, ultimately, the people.
+
+It is an absolute requirement that we not waste money.
+Therefore, if there are a few different ways to make the same measurement, it is encumbent on us to choose the most efficient of them, unless there is some important intellectual value in making the measurement in multiple ways (as there sometimes is).
+We should work with the wavelengths, the techniques, the people, the technologies, and instruments that are best at making our measurements.
+This point is connected to the ``learn new things'' point above, but it is worth noting that it is slightly in conflict with the ``people are the ends'' point.
+Importantly for what follows, if LLMs can do something important, efficiently, it is not obvious that we can ignore that.
+
+\paragraph{Correctness and rigor are paramount.}
+Astrophysics is an observational science.
+We like to talk about ``experiments,'' but fundamentally we can't perform controlled experiments:
+We observe the Universe as it is, with the photons that happen to enter the apertures of our telescopes during the times our shutters are open.
+Thus exact reproducibility is difficult, and some observations cannot be improved, no matter what we do.\footnote{%
+HOGG: Say things about Kepler planets, and about the primary CMB.}
+Thus we check or ``confirm'' most measurements in astrophysics just \emph{by inspection}, inspection of the data and code that were taken and used in the generating the analysis and conclusions.
+The only authority we have for what we do lies in methodological domains adjacent to astronomy:
+We rely on optics, mechanical engineering, remote sensing, statistics, and---very importantly---applied mathematics.
+If we don't use these methods correctly, we will get wrong answers, and, in the daisy chain of reasoning that is astrophysics, those wrong answers will propagate through to other, downstream results.
+It is imperative that we do our work as correctly as possible, and that we understand and admit the approximations and mistakes that we are making along the way.
+We must test those assumptions and correct those mistakes, perhaps not immediately, but over time, and as a community.
+We must call out mistakes and criticize wrong results and bad assumptions, and we must re-do analyses that we believe to be flawed.
+If we stop doing things rigorously and correctly, we have stopped doing astrophysics.
+This is especially true in a science with \emph{no clinical value}.
 
 \paragraph{Astrophysics has no clinical value.}
 I like to say that the sciences have a ``left edge'' which is about fundamental understanding, and understanding for understanding's sake.
@@ -184,7 +224,7 @@ We contribute to precision remote-sensing technologies, which, in turn, help the
 Congratulations, astronomy!
 But I don't even count this as clinical use of astronomy, because we build these tools \emph{to do astronomy}, these aren't the \emph{results of astronomy}.
 My point about astronomy having no right edge is that nothing in the world of things or people hangs on the precise value of the age of the Universe.
-Many astronomers have spent many years measuring it, and we know it very precisely \cite{age}.
+Many astronomers have spent many years (and billions of dollars) measuring it, and we know it very precisely \cite{age}.
 But literally nothing hinges on the question of whether it is 13.77 billion years or 13.79.
 So feel free to disagree here, and say ``yes, astronomy does have a right edge; we improve the targeting of weapons.''
 I won't fight you.
@@ -197,7 +237,34 @@ After all, much of biology is justified in these right-edge terms.
 None of astrophysics is justified in these right-edge terms.
 No astronomer (that I know) is improving the calibration of \textsl{JWST} instruments because they want the US Navy to have a higher kill rate.
 
-\section{Some comments about how astrophysics works}
+\section{What's good about astrophysics?}
+The previous \sectionname{} was supposed to list some facts, or points of agreement about what astrophysics is,
+or what it should be.
+One of those facts is that astrophysics has no clincal value---its results provide no useful resources to humanity.
+That doesn't mean there aren't benefits of doing astrophysics.
+This \sectionname{} is about those benefits.
+What do we deliver to the world?
+I am going to list all the things I know here, but (as you will see) I don't agree with all of them.
+
+\paragraph{Everyone loves astronomy.}
+
+\paragraph{Physics needs astrophysics.}
+
+\paragraph{Universities need astrophysicists.}
+
+\paragraph{We train a technical workforce.}
+
+\paragraph{We educate the public.}
+
+\paragraph{We beat ploughshares into swords.}
+
+\paragraph{We use and develop remote-sensing capabilities.}
+
+\paragraph{We create opportunities for development.}
+
+\paragraph{We create and curate human knowledge.}
+
+\paragraph{We represent a borderless world.}
 
 \section{Why do we do astrophysics?}\label{sec:why}
 Now it is time to answer the question in the title.
