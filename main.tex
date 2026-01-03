@@ -7,11 +7,12 @@
 % - postmodern idea that the meanings of documents are set by the *readers* not the *writers*. How does this connect?
 % - NBH point that we don't know the *provenance* of words written by the LLM; hence they violate our principles of provenance. Cite her blog post.
 % - On code, and use for coding, cite Bloom blog post?
+% - look at paragraph breaks?
 
 \documentclass{article}
 
 % typesetting and text macros
-\usepackage[letterpaper, textheight=9.0in, textwidth=5.5in]{geometry}
+\usepackage[letterpaper, textheight=9.0in, textwidth=5.2in]{geometry}
 \usepackage{setspace}
 \setstretch{1.08}
 \sloppy\sloppypar\raggedbottom\frenchspacing
@@ -194,6 +195,7 @@ Even with private funding, the source is, ultimately, the people.
 It is an absolute requirement that we not waste money.
 Therefore, if there are a few different ways to make the same measurement, it is encumbent on us to choose the most efficient of them, unless there is some important intellectual value in making the measurement in multiple ways (as there sometimes is).
 We should work with the wavelengths, the techniques, the people, the technologies, and instruments that are best at making our measurements.
+
 This point is connected to the ``learn new things'' point above, but it is worth noting that it is slightly in conflict with the ``people are the ends'' point.
 After all, graduate students aren't \emph{labor} to be \emph{efficiently deployed}.
 Graduate students are human beings, for whom we are supposed to be creating new opportunities.
@@ -202,10 +204,15 @@ Importantly for what follows, however, if LLMs can do something important, effic
 \paragraph{Correctness and rigor are paramount.}
 Astrophysics is an observational science.
 We like to talk about ``experiments,'' but fundamentally we can't perform controlled experiments:
-We observe the Universe as it is, with the photons that happen to enter the apertures of our telescopes during the times our shutters are open.
+We observe the Universe as it is, with the photons that happen to enter the apertures of our telescopes during the times our shutters happen to be open.
 Thus exact reproducibility is difficult, and some observations cannot be improved, no matter what we do.\footnote{%
-HOGG: Say things about Kepler planets, and about the primary CMB.}
+For example, the very smallest, longest-period planets we found with the NASA \textsl{Kepler} Mission \cite{keplerresults} represent very low-amplitude, very rare photometric events.
+They are essentially impossible to confirm with any independent data, short of launching another \textsl{Kepler}-like mission.
+For another example, the NASA \textsl{WMAP} \cite{wmap} and ESA \textsl{Planck} \cite{planck} Missions measured everything that can be measured in the primary, scalar fluctuations in the cosmic microwave background.
+How can we tell whether these results are correct?
+Either we inspect their pipelines, or else we launch another billion-USD mission.}
 Thus we check or ``confirm'' most measurements in astrophysics just \emph{by inspection}, inspection of the data and code that were taken and used in the generating the analysis and conclusions.
+
 The only authority we have for what we do lies in methodological domains adjacent to astronomy:
 We rely on optics, mechanical engineering, remote sensing, statistics, and---very importantly---applied mathematics.
 If we don't use these methods correctly, we will get wrong answers, and, in the daisy chain of reasoning that is astrophysics, those wrong answers will propagate through to other, downstream results.
