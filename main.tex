@@ -18,6 +18,7 @@
 \sloppy\sloppypar\raggedbottom\frenchspacing
 \newcommand{\documentname}{\textsl{white paper}}
 \newcommand{\sectionname}{Section}
+\newcommand{\secref}[1]{\sectionname~\ref{#1}}
 \newcommand{\paragraphskip}{\medskip}
 \renewcommand{\paragraph}[1]{\par\paragraphskip\noindent\textbf{#1}}
 
@@ -277,7 +278,7 @@ Similarly, if the macroeconomics community gets the relationship between unemplo
 A science has a right edge if and only if the associated clinical work actually tests or exercises the specific results of the science.
 In this sense, astrophysics has no right edge.
 
-\section{What's good about astrophysics?}
+\section{What's good about astrophysics?}\label{sec:benefits}
 The previous \sectionname{} was supposed to list some facts, or points of agreement about what astrophysics is,
 or what it should be.
 One of those facts is that astrophysics has no clincal value---its results provide no useful resources to humanity.
@@ -387,13 +388,19 @@ I agree!
 
 \paragraph{PEOPLE: What benefits have I missed?}
 
-\section{Why do we do astrophysics?}\label{sec:why}
-Before I answer the question in the title, I want to highlight one reason \emph{we don't do astrophysics}.
+\section{Policy recommendations}\label{sec:policy}
+I opened with the challenge confronting astrophysics with the arrival of increasingly competent large language models.
+As I said, I won't end up actually making any policy recommendations here; this \documentname{} is a gathering of relevant ideas.
+I will, however, suggest two possible, extreme policies; and I will argue \emph{against} both of them.
+That is, I only have negative things to say about simple policies.
+Before I get into that, I want to highlight one thing.
+
+\paragraph{One (counterintuitive) reason we \emph{don't} do astrophysics:}
 This might sound like a hot take, but I claim that (essentially) none of us, individually, does astrophysics because we want to learn the specific answer to the astrophysics question we are asking.
-What?
+\emph{What?}
 For example, when we measure the age of the Universe, no-one on the team actually cares what the specific value is, even though each of them might have spent many hard years of their life figuring out how to make the measurement correctly (and it isn't easy).
 
-But this point---that we don't care about the specific results---is obvious, in the following way:
+This point---that we don't care about the specific results---is obvious, in the following way:
 Anyone who has the capability of getting a PhD in astrophysics has the capability of doing many remunerative things, substantially more remunerative than my job.
 Thus, anyone who is doing astrophysics (professionally) could be, instead, earning enough money to pay \emph{multiple} professional astrophysicists to work on their behalf.
 That employed astrophysics team would get to the answers of any astrophysics questions faster than the individual could by working on their own.
@@ -412,15 +419,15 @@ The argument presented here does not make assumptions about medium-term or long-
 This all would be different, I believe, if astrophysics had a right edge (clinical value):
 Then we would care about the detailed results, because, if they came out well, they would lead to new opportunities for humanity.
 
-I opened by asking how astrophysics should react to the imminent creation of language models that can competently design, execute, analyze, write up, referee, and publish astrophysics projects.
+\paragraph{Stand back and let the AIs cook:}
+One possible extreme policy proposal is that we \emph{fully embrace} the LLMs, and encourage them (or even give them enormous resources).
+Under this policy, the vast, vast majority of astrophysics would be done by machines, and we (as a community of humans) would participate primarily through reading, vetting, and discussing the novel astrophysical results produced by the LLMs.
+Dear reader, you probably either think this policy is disastrously wrong, or obviously right.
+I want to take it seriously, not least because it is the literal, explicit proposal of one recent project \cite{denario}, and because that project has built a first version of the key tools necessary to implement this policy, end-to-end.
 
-PEOPLE: If you have read this far, you have read everything I have been able to coherently write.
-Now I am just a mess:
-
-HOGG:
-On the one hand, if LLMs get excellent at doing data science, should we just sit back and let them cook?
-We can read the results as they come in.
-That's efficient, and (maybe) rigorous. It also serves some of the public-interest aspects of the subject.
+If we implement the full-acceptance policy, astrophysics changes dramatically, but it is consistent with some of our points of agreement (listed in \secref{sec:facts}), and it does deliver many of the key benefits of astrophysics (listed in \secref{sec:benefits}):
+HOGG: THINGS TO SAY:
+It's efficient, and (maybe) rigorous. It also serves all of the public-interest, and public-education, and contribution-to-knowledge aspects of the subject.
 It probably also serves the development and military uses of astrophysics, provided that the robots can propose and plan truly new methods and experiments.
 
 HOGG:
@@ -429,6 +436,23 @@ Educating them, training them, uniting them, satisfying them.
 And, according to the arguments above, it is impossible to ``be an astrophysicist'' without ``doing astrophysics.''
 So if we just let them cook, there would be no more astrophysicists.
 Then Universities would be diminished, then education, etc.
+
+\paragraph{Ban and punish:}
+The other possible extreme policy proposal is that we \emph{fully outlaw} the LLMs, and do not permit anyone in astrophysics to use them for anything other than the most menial of tasks (like summarizing documentation), and enforce negative consequences for people or projects that used them.
+Under this policy, nothing fundamental about the practice of astrophysics would different from what it was in 2019, say, with the exception that web searches for code issues, and code development environments, might be a bit better (or at least different).
+Looking outward, the ban-and-punish attitude is (I believe, based on anecdotal evidence) most ascendant in the traditional humanities (for example, English, or history), and least ascendant in the professional schools (for example, museum studies, or management).
+
+The one difference in the practice of astrophysics (relative to the practice in 2019, say), if the astrophysics community fully implemented the ban-and-punish policy, would be that we would have to spend significant energy, resources, and attention on \emph{policing our communities}.
+After all, as the the LLMs get better, their work gets harder and harder to detect (or to distinguish from human activity), so if we, as a community, wanted to implement ban-and-punish, we would put our ... HOGG WRITE WORDS.\footnote{HOGG Something about \textsl{Turnitin} being the back side of a cheating site.}
+
+Ban-and-punish is an extreme policy, but it is consistent with with many of our points of agreement (listed in \secref{sec:facts}), and it doesn't interfere with most of the key benefits of astrophysics (listed in \secref{sec:benefits}):
+HOGG STUFF HERE.
+
+Of course, HOGG ...
+
+\paragraphskip
+PEOPLE: If you have read this far, you have read everything I have been able to coherently write.
+Now I am just a mess:
 
 HOGG:
 Is there room to talk about Phil Marshall's point about humans ``providing meaning'' to work?
