@@ -24,7 +24,7 @@
 \bibliographystyle{unsrt}\renewcommand{\newblock}{}
 \let\OLDthebibliography\thebibliography
 \renewcommand\thebibliography[1]{
-  \OLDthebibliography{#1}\setlength{\parskip}{0pt}\setlength{\itemsep}{3pt plus 0.3ex}\footnotesize
+  \OLDthebibliography{#1}\setlength{\parskip}{0pt}\setlength{\itemsep}{3pt plus 0.3ex}\footnotesize\raggedright%
 }
 
 \title{\bfseries Why do we do astrophysics?}
@@ -416,7 +416,7 @@ I agree!
 
 \paragraph{PEOPLE: What benefits have I missed?}
 
-\section{Policy recommendations}\label{sec:policy}
+\section{Policy non-recommendations}\label{sec:policy}
 I opened with the challenge confronting astrophysics with the arrival of increasingly competent large language models.
 As I said, I won't end up actually making any policy recommendations here; this \documentname{} is a gathering of relevant ideas.
 I will, however, suggest two possible, extreme policies; and I will argue \emph{against} both of them.
@@ -448,7 +448,10 @@ This all would be different, I believe, if astrophysics had a right edge (clinic
 Then we would care about the detailed results, because, if they came out well, they would lead to new opportunities for humanity.
 
 \paragraph{Stand back and let the AIs cook:}
-One possible extreme policy proposal is that we \emph{fully embrace} the LLMs, and encourage them (or even give them enormous resources).
+One possible extreme policy proposal is that we \emph{fully embrace} the LLMs, and encourage them (or even give them enormous resources\footnote{%
+One thing I have not addressed at all in this \documentname{} is the tremendous environmental impact of the training and execution of the LLMs.
+The numbers are staggering.
+It is important to remember that the human practice of astrophysics, at least in its current form, is also very damaging to the environment \cite{low-carbon, imperative}.}).
 Under this policy, the vast, vast majority of astrophysics would be done by machines, and we (as a community of humans) would participate primarily through reading, vetting, and discussing the novel astrophysical results produced by the LLMs.
 Dear reader, you probably either think this policy is disastrously wrong, or else obviously right.
 I want to take it seriously, not least because it is the literal, explicit proposal of one recent project \cite{denario}, and because that project has built a first version of the key tools necessary to implement this policy, end-to-end.
@@ -478,6 +481,11 @@ HOGG STUFF HERE.
 
 Of course, HOGG ...
 
+\paragraph{Is there a middle way?}
+HOGG: I am not sure there is.
+And even if there is, I am not sure I can find it.
+And even if I can find it, I don't see how we, as a community, could agree to it (and even less police it).
+
 \paragraphskip
 PEOPLE: If you have read this far, you have read everything I have been able to coherently write, and lots I haven't.
 Now I am just a mess.
@@ -487,6 +495,13 @@ Is there room to talk about Phil Marshall's point about humans ``providing meani
 
 HOGG:
 Is there room to talk about Natalie Hogg's point about LLMs being plagiarists?
+
+HOGG:
+How to work in a discussion of the post-structuralist idea that the meaning of a text is set by the reader, or its reception, and not by the author \cite{deadauthor}?
+This idea is relevant here, because if the author doesn't matter to meaning, then LLMs can write ``just as well'' as humans, maybe?
+Related also to PJM's point about meaning.
+I guess PJM is not a post-structuralist?
+Do we have to reject post-structuralism also if we reject the LLMs?
 
 \bibliography{why}
 
