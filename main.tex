@@ -19,6 +19,8 @@
 \newcommand{\documentname}{\textsl{white paper}}
 \newcommand{\sectionname}{Section}
 \newcommand{\secref}[1]{\sectionname~\ref{#1}}
+\newcommand{\notename}{note}
+\newcommand{\noteref}[1]{\notename\textsuperscript{\ref{#1}}}
 \newcommand{\paragraphskip}{\medskip}
 \renewcommand{\paragraph}[1]{\par\paragraphskip\noindent\textbf{#1}}
 \bibliographystyle{unsrt}\renewcommand{\newblock}{}
@@ -83,11 +85,12 @@ Both astronomers and astrophysicists contribute to and criticize the scientific 
 They built a telescope!
 But they are not astronomers in the sense of contributing to and criticizing the astronomical literature.
 Indeed, most employees at EADS are not permitted to discuss their work in public, because their work relates to weapons systems.}
-Astronomers, in the case of \textsl{Gaia}, are just end users; end users of curated, calibrated data, delivered by a combination of the (secret) spacecraft and the (absolutely great, professional) DPAC.
+Astronomers, in the case of \textsl{Gaia}, are just end users; end users of curated, calibrated data, delivered by a combination of the (secret) spacecraft and the (absolutely great, professional, and open) DPAC.
+
 The \textsl{Gaia} Mission is an extreme example, but many large projects are in this category, in one way or another:
 Most of the NASA \textsl{JWST} \cite{jwst} instruments were built and delivered by defense contractors.
 The enormous \textsl{LSST} project \cite{lsst} is being operated by a team that is a mixture of astrophysicists and engineering professionals.
-Even university-based projects like the \textsl{Sloan Digital Sky Survey} projects \cite{sdssiv, sdssv} or \textsl{GALAH} \cite{galah} endeavor to produce science-ready data products that can be queried through application programming interfaces (APIs), plotted, and analyzed without much worry about where they came from or how they got here.
+Even university-based projects like the \textsl{Sloan Digital Sky Survey} projects \cite{sdssiv, sdssv} or \textsl{GALAH} \cite{galah} endeavor to produce science-ready data products that can be queried through application programming interfaces, plotted, and analyzed without much worry about where they came from or how they got here.
 There are two points in play here:
 The first is that teams that \emph{produce data} are increasingly professionalized, and removed from research astrophysics.
 The second is that the astrophysics community is increasingly expecting to receive trustworthy, vetted, calibrated, and complete data.
@@ -105,11 +108,11 @@ For analysis of the \textsl{Gaia} data, a data scientist who has taken an astron
 Of course much of astrophysics is \emph{not} like working with the \textsl{Gaia} data.
 Many astrophysicists build instruments, operate observatories, and theorize.
 Even a student observing at a small, university-based observatory is doing things that go way beyond data science, in assessing conditions, and deciding things about data quality, or making on-the-fly changes to the observing schedule based on weather or issues at the telescope.
-Not all of astrphysics is data science, not by a long shot!
+Not all of astrophysics is data science, not by a long shot!
 But a lot of it is, and the fraction is increasing every year.
 
 How are these two changes---LLM successes and the data-scientification---related?
-They are related because contemporary \emph{LLMs can do data science}.
+They are related because \emph{contemporary LLMs can do data science}.
 It's true that there are many known limitations of present-day LLMs, for example in doing arithmetic \cite{arithmetic}, or in performing causal inferences \cite{causal}, but the models are improving by the week, and I think it is reasonable to expect that they will steadily become more competent at designing, executing, writing up, and criticizing scientific projects, at least for a while.
 There might be show-stoppers; we don't know yet.
 But this \documentname{} is being written under the assumption that LLM-like models (or ``genAI'') will improve with time until they can perform data science tasks with the same proficiency as humans.
@@ -125,7 +128,7 @@ But these form a set of assumptions from which I will try to flow any recommenda
 
 \paragraph{Astrophysics produces new knowledge about the Universe.}
 Astrophysics is a science that is driven by discovery and new measurement.
-Every PhD project and (almost) every paper involves measuring something that hasn't been measured before, or in a different way, or making a new interpretation or prediction, or finding a new object or set of objects.
+Every PhD project and (almost) every paper involves measuring something that hasn't been measured before, or in a different way, or making a new interpretation or prediction, or improving a methodology, or finding a new object or set of objects.
 That is, every project that counts as ``astrophysics'' involves scientific novelty.
 
 If you want to become an astrophysicist, it isn't sufficient to read about it, or take classes in it.
@@ -134,36 +137,38 @@ You have to \emph{do it}, and \emph{doing it} requires doing novel things, that 
 It isn't even sufficient to repeat classic or known measurements.
 Part of becoming an astrophysicist is learning how to design and plan new kinds of measurements or new approaches or applying known techniques in new areas to make new discoveries.
 The novelty is explicitly part of the project; astrophysics isn't just techniques or results; it intrinsically involves innovation.
-Astrophysics lives at the cutting edge,\footnote{I owe a lot to Rosie Wyse (JHU), in general, but also in particular for making this point very clearly to me in a conversation in 2023.} not in the past.
+Astrophysics lives at the cutting edge,\footnote{%
+I owe a lot to Rosie Wyse (JHU), in general, but also in particular for making this point very clearly to me in a conversation in 2023.}
+not in the past.
 
 \paragraph{People are always the ends, not merely the means.}
 It might sound trite to say that we do astrophysics for people.
 But the consequences of this are at least a little bit non-trivial:
 When we employ a graduate student to perform some work, it absolutely must be \emph{because the graduate student will benefit} from that work, not merely because that work needs to get done.
-This is one of the interpretations of the categorical imperative \cite{kant}, which is (to my mind) one of the few undeniably true things that have been written in the philosophical subject of ethics.
+This is one of the interpretations of the categorical imperative \cite{kant}, which is (to my mind) one of the few undeniably true principles or laws that have ever been written in the philosophical subject of ethics.
 
 I have heard it said, more than once, that an LLM can do some task ``better than a graduate student.''\footnote{%
-One memorable occasion was Paco Villaescusa (Flatiron) saying something even stronger than this, publicly, in a room full of graduate students, during a seminar in the Department of Physics at New York University in 2025.}
+One memorable occasion was Paco Villaescusa (Flatiron) saying something even substantially stronger than this, publicly, in a room full of graduate students, during a seminar in the Department of Physics at New York University in 2025.}
 That language makes me uncomfortable, because it is taking an extremely \emph{instrumental} view of graduate students.
 Are graduate students in our business \emph{to do work}?
 Or are they here \emph{to learn}?
-I very much hope the latter, or, if they are here to work, it is because that work is critical to their learning.
-We train PhD students not to amplify our own research programs, but to create opportunities, and specifically opportunities for them.
+I very much hope the latter, or, if they are here to work, it is because that work is also critical to their learning.
+We train PhD students not merely to amplify our own research programs, but to create opportunities, and specifically opportunities for them.
 In general, it is possible to take a very instrumental view of the world, in which people are described in terms of their functions---their input--output relationships, if you will---and this is the view of the world I often see reflected in the press releases of robotics and artificial-intelligence companies.
 It is important that we reject this view.
 Every person is a human being, whose personal development is more important than our short-term scientific accomplishments.\footnote{%
 One could make an argument that our \emph{long-term} scientific accomplishments---the theory of gravity, the discovery of dark matter, the possible future understanding of the origin of life or the discovery of life outside the Solar System----might be as important as people, in some sense.
-But invdividual things that PhD students are doing are way less important than those PhD students themselves.}
+But individual things that PhD students are doing are way less important than those PhD students themselves.}
 
 You might object: But science is \emph{also} important!
 It is, perhaps, but see below my point about clinical value.
-If a science does not have clinical value (no way to help people), then its results are definitely and absolutely less important than its people.
+If a science does not have clinical value (no way to help people), then its short-term results are definitely and absolutely less important than its people.
 If a science \emph{does} have clinical value, there might be room for debate.
 You might notice that I am not a \emph{utilitarian}, but I am willing to listen to utilitarian arguments.\footnote{%
 Utilitarian arguments balance benefits and harms to people, with the goal of finding the solutions that most increase the ``sum total of human happiness'' \cite{mill}.
 If a science has clinical value, then the harm to workers (of being forced to do things they don't want to do, say, or being underpaid for their work, say), can be balanced by the good done to the recipients of the clinical successes.
 I don't like these arguments, because they are used to justify using people as a means, and not an end.
-But utilitarianism works well with capitalism and development.}
+Utilitarianism works well with capitalism and development.}
 
 One interesting possible consequence of this point---the point that people are the ends, not the means---is that the standard form for research proposals might be unethical:
 Research funding in those proposals pays for graduate students, with the explicit promise of deliverables from those students.
@@ -183,7 +188,7 @@ But I believe that software is important in that it embodies and executes \emph{
 These ideas and beliefs are well gathered, disseminated, and preserved in the astrophysics literature.\footnote{%
 I should say here that I take the dissemination and preservation aspects of the literature more seriously than any other aspects.
 For this reason, I believe that \textsl{arXiv} is every bit as important as \textit{The Astrophysical Journal}.
-However, I believe that low-cost entities that just provide a ``refereeing layer'' but don't actually preserve the literature, and don't actually publish content, don't contribute much, since they are neither a disseminator nor a preserver of literature.
+However, I believe that low-cost ``free journals'' that just provide a ``refereeing layer'' but don't actually preserve the literature, and don't actually publish content, don't contribute much, since they are neither a disseminator nor a preserver of literature.
 Preserving and disseminating knowledge is never inexpensive.}
 
 Nothing we have has the track record that the traditional journals do for long-term dissemination and preservation of knowledge; we don't know what computing hardware platforms we will have in 15 years, let alone 200, but I can pretty-much guarantee that---if human civilization is still in existence---we will still be able to read Vera Rubin's papers about the dark matter (for example, \cite{vera}).\footnote{%
@@ -226,7 +231,7 @@ Perhaps more importantly, when the source of our funding or support is public, w
 Even with private funding, the source is, ultimately, the people.
 
 It is an absolute requirement that we not waste money.
-Therefore, if there are a few different ways to make the same measurement, it is encumbent on us to choose the most efficient of them, unless there is some important intellectual value in making the measurement in multiple ways (as there sometimes is).
+Therefore, if there are a few different ways to make the same measurement, it is incumbent on us to choose the most efficient of them, unless there is some important intellectual value in making the measurement in multiple ways (as there sometimes is).
 We should work with the wavelengths, the techniques, the people, the technologies, and instruments that are best at making our measurements.
 
 This point is connected to the ``learn new things'' point above, but it is worth noting that it is slightly in conflict with the ``people are the ends'' point.
@@ -450,33 +455,41 @@ However, I think the point is still good.
 Also, I must comment that this argument is unfortunately related to an absurdity known in the tech sector as ``effective altruism'' \cite{effectivealtruism}.
 For this I apologize; I think that effective altruism is wrong because of its assumptions about predictability of impacts, effects, and needs over long time scales.
 (It also assumes that the evil of rising disparity can be overcome with individual good works, but that's even \emph{more} off-topic.)
-The argument presented here does not make assumptions about medium-term or long-term futures.}
+The argument presented here does not make assumptions about the predictability of medium-term or long-term futures.}
 This all would be different, I believe, if astrophysics had a right edge (clinical value):
 Then we would care about the detailed results, because, if they came out well, they would lead to new opportunities for humanity.
 
 \paragraph{Stand back and let the AIs cook:}
 One possible extreme policy proposal is that we \emph{fully embrace} the LLMs, and encourage them (or even give them enormous resources\footnote{%
-One thing I have not addressed at all in this \documentname{} is the tremendous environmental impact of the training and execution of the LLMs.
+One thing I have not addressed at all in this \documentname{} is the tremendous environmental impact of the training of LLMs, and their inferences (their execution as generative models working on prompts).
 The numbers are staggering.
-It is important to remember that the human practice of astrophysics, at least in its current form, is also very damaging to the environment \cite{low-carbon, imperative}.}).
-Under this policy, the vast, vast majority of astrophysics would be done by machines, and we (as a community of humans) would participate primarily through reading, vetting, and discussing the novel astrophysical results produced by the LLMs.
+It is important to remember that the human practice of astrophysics, at least in its current form, is also very damaging to the environment \cite{low-carbon, imperative}.\label{note:environment}})
+to conceive of, design, execute, write up, and submit (to the journals) novel astrophysics projects and papers.
+Under this policy, the vast, vast majority of astrophysics would be done by machines, and we (as a community of humans) would participate primarily through reading, vetting, and discussing the novel astrophysical results produced by those machines.
 Dear reader, you probably either think this policy is disastrously wrong, or else obviously right.
 I want to take it seriously, not least because it is the literal, explicit proposal of one recent project \cite{denario}, and because that project has built a first version of the key tools necessary to implement this policy, end-to-end.
 
-If we implement the full-acceptance policy, astrophysics changes dramatically, but it is consistent with some of our points of agreement (listed in \secref{sec:facts}), and it does deliver many of the key benefits of astrophysics (listed in \secref{sec:benefits}):
-HOGG: THINGS TO SAY:
-It's efficient, and (maybe) rigorous. It also serves all of the public-interest, and public-education, and contribution-to-knowledge aspects of the subject.
-It probably also serves the development and military uses of astrophysics, provided that the robots can propose and plan truly new methods and experiments.
+If we implement the full-acceptance policy, astrophysics changes dramatically, but it is consistent with some of our points of agreement (listed in \secref{sec:facts}), and it does deliver many of the key benefits of astrophysics (listed in \secref{sec:benefits}).
+On the points of agreement: Astrophysics-by-LLM produces new knowledge; it doesn't use people (therefore it doesn't make people its ends); it contributes to the literature; it is efficient (time-efficient; it does use energy resources; see \noteref{note:environment}).
+It is not clear that it will be rigorous and correct.
+Right now it is hard to assess the correctness of LLM-generated content, or at least it is not easier to figure that out for LLM-generated content than any other kinds of refereeing.
+At the rate at which LLMs can design and produce papers, we humans probably can't keep control of rigor and correctness.
+Aside from that, astrophysics by LLM is indeed properly astrophysics, according to most of our points of agreement.
 
-HOGG:
-On the other hand, most of the benefits of astrophysics are about people:
-Educating them, training them, uniting them, satisfying them.
-And, according to the arguments above, it is impossible to ``be an astrophysicist'' without ``doing astrophysics.''
-So if we just let them cook, there would be no more astrophysicists.
-Then Universities would be diminished, then education, etc.
+On the benefits: Astrophysics-by-LLM is almost as good as human astrophysics in terms of feeding humanity's love of the subject;
+it delivers benefits to physics (provided that it is asked to do so);
+it can be used for military development;
+it can contribute to remote sensing;
+it creates new knowledge (provided that the projects it creates are indeed novel).
+That is, astrophysics-by-LLM delivers many of the benefits that we have identified and associated with the practice of astrophysics.
+
+So is everything fine? No everything is \emph{not fine}.
+Recall (from our points of agreement in \secref{sec:facts}) that the practice of astrophysics cannot be learned from \emph{reading about astrophysics}.... HOGG IS THIS ARGUMENT STRONG ENOUGH?
+HOGG: IF IT IS, then this would be the death of astrophysics, the end of atrophysics at universities, and the eventual end of astrophysics education.
+Astrophysics would no longer be \emph{by} humans, and then it would no longer be \emph{for} humans.
 
 \paragraph{Ban and punish:}
-The other possible extreme policy proposal is that we \emph{fully outlaw} the LLMs, and do not permit anyone in astrophysics to use them for anything other than the most menial of tasks (like summarizing documentation), and enforce negative consequences for people or projects that used them.
+The other possible extreme policy proposal is that we \emph{fully outlaw} the LLMs, and do not permit anyone in astrophysics to use them for anything other than the most menial of tasks (like summarizing documentation), and enforce negative consequences for people or projects that use them.
 Under this policy, nothing fundamental about the practice of astrophysics would different from what it was in 2019, say, with the exception that web searches for code issues, and code development environments, might be a bit better (or worse, or at least different).
 Looking outward, the ban-and-punish attitude is (I believe, based on anecdotal evidence) most ascendant in the traditional humanities (for example, English, or history), and least ascendant in the professional schools (for example, museum studies, or management).
 
@@ -484,7 +497,7 @@ The one difference in the practice of astrophysics (relative to the practice in 
 After all, as the the LLMs get better, their work gets harder and harder to detect (or to distinguish from human activity), so if we, as a community, wanted to implement ban-and-punish, we would put our ... HOGG WRITE WORDS.\footnote{HOGG Something about \textsl{Turnitin} being the back side of a cheating site.}
 
 Ban-and-punish is an extreme policy, but it is consistent with with many of our points of agreement (listed in \secref{sec:facts}), and it doesn't interfere with most of the key benefits of astrophysics (listed in \secref{sec:benefits}):
-HOGG STUFF HERE.
+... HOGG STUFF HERE.
 
 Of course, HOGG ...
 
