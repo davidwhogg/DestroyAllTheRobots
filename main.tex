@@ -4,8 +4,13 @@
 % ----------------------------
 % - finish writing the stuff
 % - NBH point that we don't know the *provenance* of words written by the LLM; hence they violate our principles of provenance. Cite her blog post.
-% - On code, and use for coding, cite Bloom blog post?
+% - On code, and use for coding, cite Bloom blog post? Where to put this?
 % - look at paragraph breaks?
+% - explicitly connect the effective altruism point to the instrumental view of astrophysicists.
+% - is it a "benefit" that we keep technical people out of evil fields?? (Gautam point).
+% - The idea that the "people" point isn't exclusive: We would also treat aliens or intelligent machines with respect. (Gautam point)
+% - The point that if people do science with closed source code, something is missing; maybe that maens that code *is* literature?
+% - The idea that, right now, it is all terrible slop. So this all is really a fantasy. Related: The idea that if the LLMs get way, way better, then the LLMs will also change all sorts of things, and astrophysics changes won't matter in that context.
 
 \documentclass{article}
 
@@ -44,8 +49,9 @@ for discussions that informed the ideas presented here, and
   Mike Blanton (Carnegie),
   Natalie B. Hogg (Cambridge),
   Phil Marshall (SLAC),
-  Kate Storey-Fisher (Stanford), and
-  Soledad Villar (JHU)
+  Kate Storey-Fisher (Stanford),
+  Soledad Villar (JHU),
+  and an interactive audience at the SkAI Center in Chicago
 for discussion of the particular content of this \documentname.
 None of these people are responsible for any of the claims presented here.
 The Flatiron Institute is a division of the Simons Foundation.}}
@@ -149,7 +155,7 @@ When we employ a graduate student to perform some work, it absolutely must be \e
 This is one of the interpretations of the categorical imperative \cite{kant}, which is (to my mind) one of the few undeniably true principles or laws that have ever been written in the philosophical subject of ethics.
 
 I have heard it said, more than once, that an LLM can do some task ``better than a graduate student.''\footnote{%
-One memorable occasion was Paco Villaescusa (Flatiron) saying something even substantially stronger than this, publicly, in a room full of graduate students, during a seminar in the Department of Physics at New York University in 2025.}
+One memorable occasion was Paco Villaescusa-Navarro (Flatiron) saying something even substantially stronger than this, publicly, in a room full of graduate students, during a seminar in the Department of Physics at New York University in 2025.}
 That language makes me uncomfortable, because it is taking an extremely \emph{instrumental} view of graduate students.
 Are graduate students in our business \emph{to do work}?
 Or are they here \emph{to learn}?
@@ -176,6 +182,12 @@ Research funding in those proposals pays for graduate students, with the explici
 When it's crunch time, are we obeying the categorical imperative?
 Another interesting possible consequence is that \emph{scientific embargoes might be unethical}.
 After all, how does stopping early-career scientists from talking publicly about their work serve \emph{their} interests?
+
+One weird comment to make here is that, when I say that ``people'' are always the ends, I don't mean to be human-centric.
+If we started doing astrophysics with deep-ocean octopuses,
+or extra-terrestrial intelligences,
+or truly intelligent machines, I think it is probably the case that those other intelligent entities probably also would have to be the ends, and not merely the means of our work.\footnote{%
+I am not certain that it is \emph{intelligence}, precisely, that makes an entity deserving of inclusion in the categorical imperative, but whatever it is, I doubt it is ``membership in the human species.''}
 
 \paragraph{Astrophysics is (roughly) the astrophysics literature.}
 My group is, in some sense, a software group.
@@ -223,15 +235,34 @@ Papers should cite the papers that are relevant to their results---the papers th
 Anything else unethically distorts the provenance of the ideas and work in our field.}
 The literature records what we know and how we know it.
 
-HOGG SAY: Is this the place to note that 'Claude' is not the author of anything?
-That is, it isn't really correct, if you use an LLM, to give that LLM co-authorship on your paper, any more than it is to give astropy or copilot or the Mac operating system coauthorship.
+One comment to make about authorship is that it is probably not the case that an LLM can be the author of a scientific paper.
+That is, it isn't really correct, if you use an LLM, to give that LLM co-authorship on your paper, any more than it is to give astropy \cite{astropy} or copilot \cite{copilot} or the Mac operating system coauthorship.
 Authors, because they are taking responsibility for their work, need to be the kinds of entities that can take responsibility for their work.
-Duh?
-and yet.,.
+Right now, LLMs can't take responsibility for anything, and they can't, later on, answer questions about why or how they did what they did (well they can, but not because they remembered it, only by reverse-engineering it).\footnote{%
+Things might get weirdly different if LLMs obtained very long-term memories.}
+HOGG IS THERE anything I can cite where an LLM HAS BEEN MADE a co-author?
+
+Finally, because the astrophysics literature preserves provenance, it is ethically required that our papers cite the work that is relevant to the work we are doing.
+You can't decide not to cite a relevant paper because you don't like the author, or don't like the author's institution, or don't like their funding sources.\footnote{%
+This sentence is perhaps a bit strong.
+There are extreme cases where very, very bad research practices render papers unciteable.
+But these are rare in astrophysics.}
+In particular, if the literature gets flooded with work of relevance to your research program, you have reading to do, and citing to do.
+This connects also to the points of agreement here about novelty and efficiency and rigor.
 
 \paragraph{Astrophysics (like every science) requires trust:}
-HOGG ASKS: Do I add this as a new point-of-agreement?\footnote{%
-This point has been made strongly to me many times by Mike Blanton (Carnegie), who gives a lot of credit to \cite{oppy}.}
+You can't do science if you don't live within a network of trust.
+This point is extremely general: You have to trust your coauthors, you have to trust the literature, and you have to trust the machinery and tools that you use.\footnote{%
+This point has been made strongly to me many times by Mike Blanton (Carnegie), who gives a lot of credit to Oppenheimer \cite{oppy}.}
+Obviously a critical part of science is testing and verifying the tools and the literature and the work we do.
+But it is impossible for an investigator to test and verify everything; the untested things must be trusted.
+It would be very difficult to do astrophysics in a context in which there is a large part of the literature that we don't trust:
+We would be required to cite it---citing relevant work is ethically required---but you can't cite things you don't trust.
+Thus we would have to do an enormous (and possibly unsustainable) amount of verification and testing in that environment.
+
+For the same reason that we must trust many entities in order to do our work,
+it is incumbent on us to \emph{build trust}.
+Open science, reproducibility, and collegiality all do this, and they all serve astrophysics well.
 
 \paragraph{We must use our resources efficiently.}
 Partly because we deliver no clinical value (see below), essentially all astrophysics grants and funding are \emph{gifts}.
@@ -330,13 +361,15 @@ In this sense, astrophysics has no right edge.
 \section{What's good about astrophysics?}\label{sec:benefits}
 \secref{sec:facts} was supposed to list some facts, or points of agreement, about what astrophysics is,
 or what it should be.
-One of those facts is that astrophysics has no clincal value---its results provide no useful resources to humanity.
+One of those facts is that astrophysics has no clinical value---its results provide no useful resources to humanity.
 That doesn't mean there aren't extremely important benefits of doing astrophysics.
 This \sectionname{} is about those benefits.
 What do we deliver to the world?
 I am going to list all the things I know here, but (as you will see) I don't agree with all of them.
+When I say ``all the things I know,'' I really am attempting to be complete:
+I am trying to list here any benefit that any entity (person or organization) could feel or receive from any part (effort or result) in astrophysics.
 
-\paragraph{Everyone loves astronomy.}
+\paragraph{People love astronomy.}
 When I decided to work in astrophysics (which I did in the period 1990--1993), I remember my father saying that he felt like the area is a good one, because astronomy will always be studied by humanity, no matter what.
 The interest in astronomy is so deep, relevant research has been done by countless civilizations, as long as humans have been around (and probably before).
 In the same way that it is good that humans produce (and read) novels, and poetry, it is good that humans produce (and learn) new ideas in astronomy and astrophysics.
@@ -513,19 +546,20 @@ Of course some of the LLM papers will also require large compute to do their pro
 With the LLMs (eventually) producing papers at $10^8$ or $10^9$ times the individual-human rate,\footnote{%
 It is interesting to note, as is (effectively) noted in \cite{denario}, that even if the vast majority of LLM papers are technically or scientifically ``mid,'' at this rate, \emph{some} of the LLM-generated papers might be absolutely excellent and insightful.}
 even the community of thousands of research-active human astrophysicists can't really meaningfully coexist with them.
+Recall the points in \secref{sec:facts} that we are obliged to verify and cite the literature that is relevant to our work.
 
 I'd be happy to hear how that argument is wrong.
 It's probably wrong because there just aren't $10^9$ good project ideas arising each year.
 So the LLMs would be ideas-limited, perhaps?
 But the humans are not, and never will be, ideas-limited (every astrophysicist has more project ideas than time).
 Thus even if the whole system is ideas-limited, the LLMs still overwhelmingly dominate astrophysics production.
-But note how this is related to the point above that we don't do astrophysics to \emph{find out the answers}:
+This is related to the point above that we don't do astrophysics to \emph{find out the answers}:
 In the let-them-cook scenario, all the humans can really do is read the outcomes of the astrophysics work being done by the far-more-productive LLMs.
 
 A comment to make about let-them-cook is that it would absolutely need to be associated with strong conventions or policies about transparency, and (possibly) reproducibility.
 Transparency is paramount.
 It is unconscionable to use an LLM to write words and not explain that; after all, the LLMs are, technically, plagiarists.\footnote{%
-This point was made very strongly to me by Natalie B. Hogg in HOGG CITE BLOGPOST.
+This point was made very strongly to me by Natalie B. Hogg \cite{natalie}.
 Of course, since we all learn what we know and how to explain it by reading and talking to others, maybe even we humans are all plagiarists?
 I don't think that is true, but an argument could be made.}
 Transparency is required for the provenance point I discuss above in \secref{sec:facts}; it is critical to the integrity of the astrophysics literature.
@@ -534,6 +568,11 @@ Indeed they are designed to \emph{never} give the same answer to the same prompt
 Literally the opposite of reproducible, plus they are constantly upgraded.\footnote{%
 The irreversible upgrading of systems is anathema to reproducibility.
 For example the NASA \textsl{Horizons} system \url{https://ssd.jpl.nasa.gov/} that models the Solar System (for computing, for example, barycentric corrections for radial-velocity measurements and transit timing) is regularly upgraded without any preservation of past state, rendering almost every result in the observational study of exoplanets technically irreproducible.}
+
+By the way, if it really is true that the LLMs, in a matter of years, could increase the size of the astrophysics literature by factors of thousands or millions,
+and if, in that scenario, almost all papers are written by LLMs and also read by LLMs,
+then there is no reason to expect that the scientific literature would or should be written in human-readable languages.
+In this future, presumably ``reading the literature'' means having an LLM search and translate it for you.
 
 \paragraph{Ban and punish:}
 The other possible extreme policy proposal I could make (and, to be clear, I am also \emph{not} making) is that we \emph{fully outlaw} the LLMs, and do not permit anyone in astrophysics to use them for anything other than the most menial of tasks (like summarizing documentation), and we also enforce negative consequences for people or projects that use them.
@@ -558,9 +597,18 @@ It's also relevant to funding agencies, funding sources, and the success of earl
 If a project or a person has a way to do their project faster and better, why would we stop them from using it?
 That seems artificial and harmful, to our sources of funding, and to our people.
 
+Perhaps even more importantly, \emph{ban-and-punish violates academic freedom}.
+I am almost an academic-freedom absolutist; certainly I value very highly the fact that I can work on whatever I want, with whatever tools I want, with whoever I want, in whatever style I want.
+It's not just a luxury:
+Academic freedom makes possible the creativity and innovation that leads to discovery and advancement in astrophysics (and all fields).
+Furthermore, in my opinion, academic freedom is not just the privilege of tenured faculty.
+Everyone working in astrophysics, including students, postdocs, junior faculty, staff, and engineers has, or really deserves, some degree of academic freedom.
+We should operate our projects and our groups such that our people, no matter their rank, have as much freedom as possible.
+That's just a good idea, but also it helps make our work consistent with the points of agreement about novelty, about people, and about efficiency.
+
 To be very clear: I don't think ban-and-punish is good policy.
 It artificially restricts what astrophysicists---and especially early-career astrophyisicists---can do.
-The ban-and-punish policy also isn't consistent with our obligations to our funding sources and our public.
+The ban-and-punish policy violates academic freedom, and it isn't consistent with our obligations to our funding sources and our public.
 Plus, I am not a cop; ACAB.
 
 \paragraph{Is there a middle way?}
