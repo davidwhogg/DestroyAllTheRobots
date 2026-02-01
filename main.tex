@@ -2,18 +2,25 @@
 
 % to-do and questions for Hogg
 % ----------------------------
-% - finish writing the stuff
+% - create a blogpost bibtex format
+% - comment on my own use of LLMs in writing this paper: Bibtex help, and post-structuralism, say.
 % - NBH point that we don't know the *provenance* of words written by the LLM; hence they violate our principles of provenance. Cite her blog post.
 % - On code, and use for coding, cite Bloom blog post? Where to put this?
 % - look at paragraph breaks?
 % - explicitly connect the effective altruism point to the instrumental view of astrophysicists.
-% - is it a "benefit" that we keep technical people out of evil fields?? (Gautam point).
 % - The idea that the "people" point isn't exclusive: We would also treat aliens or intelligent machines with respect. (Gautam point)
 % - The point that if people do science with closed source code, something is missing; maybe that maens that code *is* literature?
 % - The idea that, right now, it is all terrible slop. So this all is really a fantasy. Related: The idea that if the LLMs get way, way better, then the LLMs will also change all sorts of things, and astrophysics changes won't matter in that context.
 % - Connect the correctness and rigor point with the trust point.
-% - Make it clear that this is about WESTERN astrophysics.
+% - Make it clear that this is about Contemporary WESTERN astrophysics
+% - Related: Ancient and non-western communities used astronomy to schedule the harvest and schedule cultural events, also for navigation!! Cite things.
 % - Comment on the fact that it will all be SLOP. No matter what.
+% - Extensive Meek comments in email dated 2026-01-19.
+% - Extensive KSF comments in email dated 2026-01-20 (or maybe 19).
+% - Cite blog posts by Wes and Bloom re (code) languages of LLMs.
+% - cite this: https://datasociety.net/points/on-arxiv-an-influx-of-ai-slop-pits-surface-against-substance/
+% - Contardo: Breaks the collective / community aspects of Astrophysics. Only three actors.
+% - I need a translator on Kant, and maybe also Barthes?
 
 \documentclass{article}
 
@@ -41,6 +48,7 @@
 David W. Hogg is in the Center for Cosmology and Particle Physics, Department of Physics, New York University; and in the Center for Computational Astronomy, Flatiron Institute; and at the Max-Planck-Institut f\"ur Astronomie, Heidelberg.}~\footnote{%
 The author thanks
   Mike Blanton (Carnegie),
+  Josh Bloom (Berkeley),
   Gaby Contardo (Nova Gorica),
   Matt Daunt (NYU),
   Juna Kollmeier (Carnegie),
@@ -49,14 +57,16 @@ The author thanks
   Hans-Walter Rix (MPIA), and
   Kate Storey-Fisher (Stanford)
 for discussions that informed the ideas presented here, and 
-  Mike Blanton (Carnegie),
-  Natalie B. Hogg (Cambridge),
+  Blanton,
+  Natalie~B. Hogg (Cambridge),
   Phil Marshall (SLAC),
-  Kate Storey-Fisher (Stanford),
+  David~R. McMillen (Toronto),
+  Gautham Narayan (UIUC),
+  Storey-Fisher,
   Soledad Villar (JHU),
   and an interactive audience at the SkAI Center in Chicago
 for discussion of the particular content of this \documentname.
-None of these people are responsible for any of the claims presented here.
+None of these are responsible for any of the claims presented here.
 The Flatiron Institute is a division of the Simons Foundation.}}
 \date{January 2026}
 
@@ -117,7 +127,7 @@ For analysis of the \textsl{Gaia} data, a data scientist who has taken an astron
 
 Of course much of astrophysics is \emph{not} like working with the \textsl{Gaia} data.
 Many astrophysicists build instruments, operate observatories, and theorize.
-Even a student observing at a small, university-based observatory is doing things that go way beyond data science, in assessing conditions, and deciding things about data quality, or making on-the-fly changes to the observing schedule based on weather or issues at the telescope.
+Even a student observing at a small, university-based observatory is doing things that go way beyond data science, in assessing conditions, deciding things about data quality, or making on-the-fly changes to the observing schedule based on weather or issues at the telescope.
 Not all of astrophysics is data science, not by a long shot!
 But a lot of it is, and the fraction is increasing every year.
 
@@ -157,8 +167,7 @@ But the consequences of this are at least a little bit non-trivial:
 When we employ a graduate student to perform some work, it absolutely must be \emph{because the graduate student will benefit} from that work, not merely because that work needs to get done.
 This is one of the interpretations of the categorical imperative \cite{kant}, which is (to my mind) one of the few undeniably true principles or laws that have ever been written in the philosophical subject of ethics.
 
-I have heard it said, more than once, that an LLM can do some task ``better than a graduate student.''\footnote{%
-One memorable occasion was Paco Villaescusa-Navarro (Flatiron) saying something even substantially stronger than this, publicly, in a room full of graduate students, during a seminar in the Department of Physics at New York University in 2025.}
+I have heard it said, more than once, that an LLM can do some task ``better than a graduate student.''
 That language makes me uncomfortable, because it is taking an extremely \emph{instrumental} view of graduate students.
 Are graduate students in our business \emph{to do work}?
 Or are they here \emph{to learn}?
@@ -308,6 +317,31 @@ We must call out mistakes and criticize wrong results and bad assumptions, and w
 If we stop doing things rigorously and correctly, we have stopped doing astrophysics.
 This is especially true in a science with \emph{no clinical value}.
 
+\paragraph{We don't do astrophysics to \emph{find out the answers}:}
+This is probably the least agreed-upon point of agreement, and my hottest take.
+I claim that (essentially) none of us, individually, does astrophysics because we want to learn the specific answer to the astrophysics question we are asking.
+\emph{What?}
+For example, when we measure the age of the Universe, no-one on the team actually cares what the specific value is, even though each of them might have spent many hard years of their life figuring out how to make the measurement correctly (and it isn't easy).
+
+This point---that we don't care about the specific results---is obvious, in the following way:
+Anyone who has the capability of getting a PhD in astrophysics has the capability of doing many remunerative things, substantially more remunerative than my job.
+Thus, anyone who is doing astrophysics (professionally) could be, instead, earning enough money to pay \emph{multiple} professional astrophysicists to work on their behalf.
+That employed astrophysics team would get to the answers of any astrophysics questions faster than the individual could by working on their own.
+If all we \emph{really} wanted was to know how the Universe worked, we would start a hedge fund, and use the proceeds to pay an astrophysics institute, filled with people who wanted to \emph{do astrophysics} rather than \emph{find out the answers}.
+This is not far from what people like Jim Simons (co-founder of the Simons Foundation) did.
+Jim Simons is partially responsible for a lot of results in physics and astronomy (and mathematics and Autism research, and more), more than any astrophysicist,
+and he did all that by running an extremely successful hedge fund in the US \cite{simons}.
+Thus anyone working in astrophysics is someone who wants to \emph{do astrophysics}, not someone who wants to \emph{learn the answers}; there are way more efficient ways to learn the answers.\footnote{%
+This argument assumes that astrophysicists are, by and large, rational.
+That's a bad assumption, given the points about remuneration.
+However, I think the point is still good.
+Also, I must comment that this argument is unfortunately related to an absurdity known in the tech sector as ``effective altruism'' \cite{effectivealtruism}.
+For this I apologize; I think that effective altruism is wrong because of its assumptions about predictability of impacts, effects, and needs over long time scales.
+(It also assumes that the evil of rising disparity can be overcome with individual good works, but that's even \emph{more} off-topic.)
+The argument presented here does not make assumptions about the predictability of medium-term or long-term futures.}
+This all would be different, I believe, if astrophysics had clinical value:
+Then we would care about the detailed results, because, if they came out well, they would lead to new opportunities for humanity.
+
 \paragraph{Astrophysics has no clinical value.}
 I like to say that the sciences have a ``left edge'' which is about fundamental understanding, and understanding for understanding's sake.
 They also mostly have a ``right edge'' which is about clinical value or application or use in the world.
@@ -328,7 +362,7 @@ We learned about neutrino mass mixing and the entire dark sector from astrophysi
 But these astrophysics results inform the \emph{left edge} of particle physics, not the right edge.
 An even less silly objection is that we develop, build, and exercise imagers, cameras, spectrographs, spacecraft platforms and so on, which have right-edge applications.
 All that is true!
-That's the closest we come to having a right edge:
+That---with the exception of the Earth-crossing asteroids, mentioned above---is as close as we come to having a right edge:
 We contribute to precision remote-sensing technologies, which, in turn, help the US and other nations target weapons.
 Congratulations, astronomy!
 But I don't even count this as clinical use of astronomy, because we build these tools \emph{to do astronomy}, these aren't the \emph{results of astronomy}.
@@ -347,7 +381,13 @@ None of astrophysics is justified in these right-edge terms.
 No astronomer (that I know) is improving the calibration of \textsl{JWST} instruments because they want the US Navy to have a higher kill rate.\footnote{%
 The closest thing I can see in my own world to anyone making this argument is that the US funding agencies (NASA and NSF) explicitly prefer research proposals that develop technologies that could be transferred to commercial enterprises.}
 
-To this no-clinical-value point I have heard the objection:
+While I want to say, in this \sectionname, ``no clinical value,''
+I have to admit that there is one substantial clinical value of one sub-branch of astrophysics:
+The search for Earth-crossing asteroids might potentially, some day, save humanity from an enormous disaster.
+I think this is niche enough to leave my main point untouched,
+but I do have to admit that the work we do on instrument calibration and the detection of faint, moving objects (my own contribution here being \cite{undetectable}) could deliver enormous, direct benefits for humanity some day.
+
+When I make the no-clinical-value argument I sometimes get the following:
 Since (as we said above) humanity loves astrophysics, it must be the case that it is clinically valuable!
 It must be that the clinical value lies in its feeding of humanity's love.\footnote{%
 Roger Blandford (Stanford) sometimes says that astrophysics provides ``hope'' to humanity \cite{hope}.
@@ -361,7 +401,7 @@ Similarly, if the macroeconomics community gets the relationship between unemplo
 A science has a right edge if and only if the associated clinical work actually tests or exercises the specific results of the science.
 In this sense, astrophysics has no right edge.
 
-\section{What's good about astrophysics?}\label{sec:benefits}
+\section{The benefits of doing astrophysics}\label{sec:benefits}
 \secref{sec:facts} was supposed to list some facts, or points of agreement, about what astrophysics is,
 or what it should be.
 One of those facts is that astrophysics has no clinical value---its results provide no useful resources to humanity.
@@ -405,7 +445,9 @@ This technical workforce argument is literally and explicitly the reason that th
 Although PhD students are the group most ``trained in astrophysics,'' all the same arguments apply to undergraduates.
 Undergraduate astrophysics students go on to technical careers in all kinds of industries,
 and also populate graduate schools in many natural-science and engineering disciplines.
-An astrophysics undergraduate degree is a great preparation for work in climate, for example, which is undeniably important.
+An astrophysics undergraduate degree is a great preparation for work in climate, for example, which is undeniably important.\footnote{%
+I've heard it said that a benefit of astrophysics is that, by employing astrophysicists, we keep strong technical people \emph{out of} other technical areas that are more harmful, like finance or weapons.
+I don't agree with this!}
 
 \paragraph{We educate the public.}
 The public---from undergraduates \emph{not} in the sciences to the television-watching public---are excited about astrophysics and want to learn more about it and more from it.
@@ -480,31 +522,6 @@ I opened with the challenge confronting astrophysics with the arrival of increas
 As I said, I won't end up actually making any policy recommendations here; this \documentname{} is a gathering of relevant ideas.
 I will, however, suggest two possible, extreme policies; and I will argue \emph{against} both of them.
 That is, I only have negative things to say about simple policies.
-Before I get into that, I want to highlight one thing.
-
-\paragraph{One (counterintuitive) reason we \emph{don't} do astrophysics:}
-This might sound like a hot take, but I claim that (essentially) none of us, individually, does astrophysics because we want to learn the specific answer to the astrophysics question we are asking.
-\emph{What?}
-For example, when we measure the age of the Universe, no-one on the team actually cares what the specific value is, even though each of them might have spent many hard years of their life figuring out how to make the measurement correctly (and it isn't easy).
-
-This point---that we don't care about the specific results---is obvious, in the following way:
-Anyone who has the capability of getting a PhD in astrophysics has the capability of doing many remunerative things, substantially more remunerative than my job.
-Thus, anyone who is doing astrophysics (professionally) could be, instead, earning enough money to pay \emph{multiple} professional astrophysicists to work on their behalf.
-That employed astrophysics team would get to the answers of any astrophysics questions faster than the individual could by working on their own.
-If all we \emph{really} wanted was to know how the Universe worked, we would start a hedge fund, and use the proceeds to pay an astrophysics institute, filled with people who wanted to \emph{do astrophysics} rather than \emph{find out the answers}.
-This is not far from what people like Jim Simons (co-founder of the Simons Foundation) did.
-Jim Simons is partially responsible for a lot of results in physics and astronomy (and mathematics and Autism research, and more), more than any astrophysicist,
-and he did all that by running an extremely successful (and tax-avoidant) hedge fund in the US \cite{simons}.
-Thus anyone working in astrophysics is someone who wants to \emph{do astrophysics}, not someone who wants to \emph{learn the answers}; there are way more efficient ways to learn the answers.\footnote{%
-This argument assumes that astrophysicists are, by and large, rational.
-That's a bad assumption, given the points about remuneration.
-However, I think the point is still good.
-Also, I must comment that this argument is unfortunately related to an absurdity known in the tech sector as ``effective altruism'' \cite{effectivealtruism}.
-For this I apologize; I think that effective altruism is wrong because of its assumptions about predictability of impacts, effects, and needs over long time scales.
-(It also assumes that the evil of rising disparity can be overcome with individual good works, but that's even \emph{more} off-topic.)
-The argument presented here does not make assumptions about the predictability of medium-term or long-term futures.}
-This all would be different, I believe, if astrophysics had a right edge (clinical value):
-Then we would care about the detailed results, because, if they came out well, they would lead to new opportunities for humanity.
 
 \paragraph{Stand back and let the AIs cook:}
 One possible extreme policy proposal I could make (and, to be clear, I am \emph{not} making) is that we \emph{fully embrace} the LLMs, and encourage them (or even give them enormous resources\footnote{%
@@ -595,8 +612,7 @@ After all, it doesn't change the practice of astrophysics.
 It just adds an onerous policing activity to our practice.
 The only respect in which ban-and-punish does not conform to the points of agreement is that it is almost certainly not the most \emph{efficient} way to do astrophysics.
 It is already the case that LLM systems can produce plausible scientific papers in minutes, and this capability will likely improve.
-That's relevant to the question of whether there are other possible policies.
-It's also relevant to funding agencies, funding sources, and the success of early-career astrophysicists.
+That's relevant to funding agencies, funding sources, and the success of early-career astrophysicists.
 If a project or a person has a way to do their project faster and better, why would we stop them from using it?
 That seems artificial and harmful, to our sources of funding, and to our people.
 
@@ -605,7 +621,7 @@ I am almost an academic-freedom absolutist; certainly I value very highly the fa
 It's not just a luxury:
 Academic freedom makes possible the creativity and innovation that leads to discovery and advancement in astrophysics (and all fields).
 Furthermore, in my opinion, academic freedom is not just the privilege of tenured faculty.
-Everyone working in astrophysics, including students, postdocs, junior faculty, staff, and engineers has, or really deserves, some degree of academic freedom.
+Everyone working in astrophysics, including every student, postdoc, junior faculty member, staff member, and engineer has---or really deserves---some degree of academic freedom.
 We should operate our projects and our groups such that our people, no matter their rank, have as much freedom as possible.
 That's just a good idea, but also it helps make our work consistent with the points of agreement about novelty, about people, and about efficiency.
 
@@ -615,9 +631,15 @@ The ban-and-punish policy violates academic freedom, and it isn't consistent wit
 Plus, I am not a cop; ACAB.
 
 \paragraph{Is there a middle way?}
-HOGG: I am not sure there is.
+I am not sure there is.
 And even if there is, I am not sure I can find it.
-And even if I can find it, I don't see how we, as a community, could agree to it (and even less police it).
+And even if I can find it, I don't see how we, as a community, could agree to it (and even less police or enforce it).
+
+The only positive idea I have here is that transparency and disclosure are going to be important parts of whatever we do.
+I think that's uncontroversial.
+A hotter take is that the disclosure requirements we adopt might become quite onerous, since the LLMs are (by construction) not reproducible.
+It might be that we must record and publish (in some form) every single complete LLM interaction we have in performing a scientific project.
+This is a lot, but perhaps not dissimilar to the scientific notebook requirements associated with US National Institutes of Health grant awards \cite{nih}.
 
 \paragraph{Comments:}
 PEOPLE: If you have read this far, you have read everything I have been able to coherently write, and lots I haven't.
