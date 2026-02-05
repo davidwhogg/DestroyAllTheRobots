@@ -55,6 +55,7 @@ The author thanks
   Josh Bloom (Berkeley),
   Gaby Contardo (Nova Gorica),
   Matt Daunt (NYU),
+  Leslie Greengard (Flatiron),
   Juna Kollmeier (Carnegie),
   Jim Peebles (Princeton),
   Adrian Price-Whelan (Flatiron),
@@ -70,6 +71,7 @@ In addition I want to specifically thank
   Greg McDonald (Rum\&Code),
   David~R. McMillen (Toronto),
   Gautham Narayan (UIUC),
+  Rix,
   Storey-Fisher,
   Soledad Villar (JHU),
   and an interactive audience at the SkAI Center in Chicago
@@ -100,10 +102,13 @@ There are already conferences being set up in which all the papers are written, 
 There is evidence that a large fraction of submitted academic papers contain LLM-written text and the fraction seems to be growing with time \cite{paperslop}.
 This \documentname{} is inspired by this very rapid change.
 
-\emph{HOGG (note to self): For context, LLMs are ... Describe what LLMs do and why they are not AIs.}
-% [GREG] I agree with Meek (you mentioned he asked for more on LLMs). A short para on what an LLM is/does. That would be a good place to explain your objection to the term genAI. I read "I really don't like that" and wonder why and you never tell me. This makes me sad ;-) I'd move the example (denario) after the line "LLMs can do data science." I see the flow as (0) this \docname is inspired by the rapid changes taking place simultaneously the area of artificial intelligence and the way astrophysics projects are done/run(?) (1) In the last two years, the capacities of LLM have grown beyond belief. What is an LLM. Why the rapid change. Briefly, why not "genAI". Wouldn't matter more to astrophysicist than anyone else were it not for change in projects (2) In the last several decades, changes in project: professionalization of etc. Data science. (3) This matters because LLMs can do data science. Denario example, etc.
+For context, LLMs are models trained on huge text corpuses (close to the entirety of all human text output, ever) that can fill in and predict missing words in text or extend text starting at prompts from users.
+These models produce informative, syntactically correct text, reproducing facts and ideas in the training data, but in new phrasings and with apparently synthetic recombinations of ideas from disparate sources.
+These LLMs are capable of generating novel, interesting, and correct content.
+I, personally, don't think they are ``generative artificial intelligences,'' because although they are generative (they generate new things), they show no signs of intelligence.
+They do, however, pass the Turing Test \cite{turing}, which is certainly concerning.
 
-There is another change happening in astrophysics, which is happening on a much longer time scale, but which is relevant:
+Unrelated to the rise of LLMs and their increasing academic capabilities, there is another change happening in astrophysics, which is happening on a much longer time scale, but which is relevant:
 Astronomical data production is becoming extremely professionalized, and in a very particular way.
 An extreme example is the ESA \textsl{Gaia} Mission \cite{gaia}:
 Once the instrument was designed, the plans were moved inside the fence\footnote{I am using the phrase ``inside the fence'' to mean ``accessible only to those with governmental approval to work on weapons systems, that is, those with security clearances.''} at EADS, the European military contractor.
@@ -145,7 +150,7 @@ But a lot of it is, and the fraction is increasing every year.
 
 How are these two changes---LLM successes and the data-scientification---related?
 They are related because \emph{contemporary LLMs can do data science}.
-It's true that there are many known limitations of present-day LLMs, for example in doing arithmetic \cite{arithmetic}, or in performing causal inferences \cite{causal}, but the models are improving by the week, and I think it is reasonable to expect that they will steadily become more competent at designing, executing, writing up, and criticizing scientific projects, at least for a while.
+It's true that there are many known limitations of present-day LLMs, for example in doing basic mathematics \cite{arithmetic}, or in performing causal inferences \cite{causal}, but the models are improving by the week, and I think it is reasonable to expect that they will steadily become more competent at designing, executing, writing up, and criticizing scientific projects, at least for a while.
 There might be show-stoppers; we don't know yet.
 But this \documentname{} is being written under the assumption that LLM-like models (or ``genAIs'') will improve with time until they can perform data science tasks with the same proficiency as humans.
 What does the study of astrophysics look like in this future?
@@ -266,7 +271,11 @@ That is, it isn't really correct, if you use an LLM, to give that LLM co-authors
 Authors, because they are taking responsibility for their work, need to be the kinds of entities that can take responsibility for their work.
 Right now, LLMs can't take responsibility for anything, and they can't, later on, answer questions about why or how they did what they did (well they can, but not because they remembered it, only by reverse-engineering it).\footnote{%
 Things might get weirdly different if LLMs obtained very long-term memories (which isn't obviously difficult to implement), but it still probably wouldn't address the point that, in their current form, none of the LLMs has any way to \emph{take responsibility} for anything.}
-\emph{HOGG (note to self): Is there anything I can cite where an LLM HAS BEEN MADE a co-author?}
+Weirdly, that hasn't stopped the publication of some scattered papers with ``ChatGPT'' as a coauthor, for example \cite{chatauthor}.
+
+One way to codify this responsibility point has been put forward by the Committee on Publication Ethics \cite{cope} and the International Committee of Medical Journal Editors \cite{icmje}.
+One of the reasons that an LLM cannot be an author because it \emph{cannot sign a copyright or licensing agreement}.
+That argument is too connected to technical intellectual property rules for my taste, but it does make legally explicit the point that LLMs cannot take responsibility for anything.
 
 Finally, because the astrophysics literature preserves provenance, it is ethically required that our papers cite the work that is relevant to the work we are doing.
 You can't decide not to cite a relevant paper because you don't like the author, or don't like the author's institution, or don't like their funding sources.\footnote{%
@@ -412,7 +421,7 @@ but I do have to admit that the work we do on instrument calibration and the det
 When I make the no-clinical-value argument I sometimes get the following:
 Since (as we said above) humanity loves astrophysics, it must be the case that it is clinically valuable!
 It must be that the clinical value lies in its feeding of humanity's love.\footnote{%
-Roger Blandford (Stanford) sometimes says that astrophysics provides ``hope'' to humanity \cite{hope}.
+Roger Blandford (Stanford) sometimes says that astrophysics provides ``hope'' to humanity.
 Maybe that's a strong claim, but I don't think it is wrong.}
 But this is not truly a \emph{clinical} value in the following sense:
 In no way does this application of astrophysics depend on the correctness or values of the outcomes of astrophysics projects.
@@ -457,7 +466,7 @@ Very few of my PhD students---and very few of anyone's PhD students, I hope---be
 Most astrophysics PhDs obtain long-term careers in other technical professions, such as tech, finance, and engineering.
 Astrophysics, it turns out, is a very good training for quantitative professions that involve computational modeling.
 Thus astrophysics research produces very good people for technical innovation and growing our economy.
-This technical workforce argument is literally and explicitly the reason that the Max Planck Society in Germany supports astrophysics research \cite{mpi}.
+This technical workforce argument is literally and explicitly the reason that the Max Planck Society in Germany supports astrophysics research.\footnote{Hans-Walter Rix (MPIA), private communication.}
 
 Although PhD students are the group most ``trained in astrophysics,'' all the same arguments apply to undergraduates.
 Undergraduate astrophysics students go on to technical careers in all kinds of industries,
@@ -605,7 +614,8 @@ Of course, since we all learn what we know and how to explain it by reading and 
 I don't think that is true, but an argument could be made.}
 Transparency is required for the provenance point I discuss above in \secref{sec:facts}; it is critical to the integrity of the astrophysics literature.
 
-But transparency is also required for \emph{reproducibility}, and one very disturbing thing about the current LLMs is that they are not even close to reproducible.
+But transparency is also required for \emph{reproducibility};
+one very disturbing thing about the current LLMs is that they are not even close to reproducible.
 Indeed they are designed to \emph{never} give the same answer to the same prompt.
 Literally the opposite of reproducible, plus they are constantly upgraded.\footnote{%
 The irreversible upgrading of systems is anathema to reproducibility.
@@ -616,7 +626,7 @@ Of course, as I commented in \secref{sec:facts}, there are many aspects of astro
 By the way, if it really is true that the LLMs, in a matter of years, could increase the size of the astrophysics literature by factors of thousands or millions,
 and if, in that scenario, almost all papers are written by LLMs and also read by LLMs,
 then there is no reason to expect that the scientific literature would or should be written in human-readable languages.\footnote{%
-A related but different point---about the computer languages in which LLMs will write code in the future---is being discussed in the vibe-coding arena \cite{wes, bloom}.}
+A related but different point---about the computer languages in which LLMs will write code in the future---is being discussed in the vibe-coding arena \cite{bloom}.}
 In this future, presumably ``reading the literature'' means having a translator LLM search and translate it for you.
 
 \paragraph{Ban-and-punish:}
@@ -676,11 +686,29 @@ Here I make a final set of comments on the above, in no particular order.
 The first comment I want to make is that it is hard for me to anticipate how what I've written here will be received.
 I am not particularly a hater on the LLMs.
 I use them in my research, and especially to learn about programming languages and environments with which I am unfamiliar.
-For this very \documentname, I used LLMs to learn some details about BibTeX formatting, and also get a summary of some ideas in animal rights (see above) and post-structuralist literary criticism (see below).
+For this very \documentname, I used LLMs to learn some details about \textsl{BibTeX} formatting, and also get a summary of some ideas in animal rights (see above) and post-structuralist literary criticism (see below).
 
-\emph{HOGG (note to self): My position is that LLMs are pivoters of documentation. Use post-structuralism as the example.}
+I said at the beginning that LLMs are not ``AIs.''
+Because the LLMs are data-driven text-interpolators, I believe that their best and most useful role is in \emph{refactoring} or pivoting \emph{documentation}.
+For example, when I used the LLM (\textsl{Claude} in this case) to learn about post-structuralism, I asked about strains of thought in literary criticism.
+The LLM permitted me to do a kind of ``reverse look-up'' of that concept, starting at natural-language phrases like ``the idea that the meaning of a document is set by the reader, at the time of reading, not by the author, at the time of writing.''
+Once that worked, I worked through the Wikipedia page \cite{poststructuralism}, which is absolutely excellent.
 
-\emph{HOGG (note to self): GREG asks: What would an LLM have to do to earn your trust? Is it even possible for something that has no accountability, cannot take responsability or suffer consequences (career setbacks, humiliation) to be trustworthy? How is an LLM different from a corporation?}
+\emph{Trust} was a critical idea among the points of agreement,
+and trust is also one of the main issues that practitioners bring up when they use or interact with the LLMs.
+How could we ever trust an LLM, especially when they, historically, can't tell you how many letter Rs there are in the word ``strawberry''?
+As LLMs improve, trust will probably improve, both because the companies recognize this as a critical limitation, and because there are (I understand) large groups working on introspection, interpretability, explainability, and guardrails.
+I am not sure we will ever trust an LLM as much as we trust the coordinates package, say, of \textsl{astropy} \cite{astropy},
+but we might end up, on a timescale of months to years, considering LLM code and text to be substantially correct.
+That would be great, but correctness is only one small part of trust.
+A trusted partner is one that takes responsibility for their work.
+The \textsl{astropy} codebase can't take responsibility, but the specific authors of the code, and in particular the authors of the coordinates package, definitely \emph{can} take responsibility, and \emph{do} take responsibility.
+They have careers and reputations and relationships on the line.
+Entities like \textsl{Claude}---and its parent Anthropic---take no responsibility and never will.\footnote{%
+This responsibility point is a big part of the reason we prefer open-source software projects over alternatives:
+Open-source projects tend to have transparent authorship, bug-reporting systems, and responsive maintainers.
+It's very hard to get a technical question or bug report answered by Apple or Microsoft.
+This point implicitly brings up the question: What would be different if we had truly open-source LLMs, with open training and open weights?}
 
 While above I said that citations should \emph{not} be seen as the ``coin of the realm,'' in fact they \emph{are} very materially relevant:
 More highly published and more highly cited scholars, especially at early career stages, tend to fare better in job searches.
@@ -707,7 +735,11 @@ Obviously this is debatable, and perhaps the rise of the LLMs will lead to a rec
 Perhaps meaning is what is transmitted from the author's knowledge to the reader's knowledge.
 If the LLMs don't ``know'' anything, then, in this view, the documents they ``write'' might end up being meaningless.
 
-HOGG (note to self): Andy says: \textsl{For your final paragraph I think you should end on “why did I write this white paper”, which might include something about how there is a very diverse set of perspectives on LLMs in astronomy (just even within your circle). People have very strong and disparate views, and ultimately they are probably arguing about the wrong question of HOW we do astronomy when they should be asking WHY do we do astronomy.} I agree with that!
+Finally: Why did I write this \documentname?
+I wrote this because I became concerned about some of the ideas circulating in the astrophysics community about LLMs and their capabilities, conflating what are (in my view) text-interpolators with what are (in my view) scientists.
+There is, obviously, a very wide range of opinions, within the responsible astrophysics community, about what LLMs are and how they can be used as tools (see \cite{ting} and \cite{trotta} for two very different but responsible perspectives).
+Ultimately, I think the real question we face is not the question of \emph{how} we do astrophysics.
+It is the question of \emph{why} we do astrophysics.
 
 \bibliography{why}
 
