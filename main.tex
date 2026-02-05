@@ -2,6 +2,7 @@
 
 % to-do and questions for Hogg
 % ----------------------------
+% - Look at notes from AGG Community Meeting from 2026-01-26 (maybe, or the week before?) and see who I want to quote.
 % - NBH point that we don't know the *provenance* of words written by the LLM; hence they violate our principles of provenance. Cite her blog post.
 % - On code, and use for coding, cite Bloom blog post? Where to put this?
 % - look at paragraph breaks?
@@ -20,7 +21,8 @@
 % - Do we want a header on all pages?
 % - Is it ABSOLUTELY CLEAR why I object to let-them-cook?
 % - Are we clear enough (about slop) that the models would have to get way way better to be as robust and creative and interesting and reliable and responsible as humans?
-% - Meek thought that I haven't said enough about what the LLMs DO or ARE.
+% - Meek and Greg thought that I haven't said enough about what the LLMs DO or ARE.
+% - Figure out how to cite perspectives by Ting and Roberto.
 
 \documentclass{article}
 
@@ -57,10 +59,13 @@ The author thanks
   Adrian Price-Whelan (Flatiron),
   Hans-Walter Rix (MPIA), and
   Kate Storey-Fisher (Stanford)
-for discussions that informed the ideas presented here, and 
+for discussions over the years, which informed the ideas presented here.
+In addition I want to specifically thank
   Blanton,
+  Andy Casey (Flatiron),
   Natalie~B. Hogg (Cambridge),
   Phil Marshall (SLAC),
+  Greg McDonald (Rum\&Code),
   David~R. McMillen (Toronto),
   Gautham Narayan (UIUC),
   Storey-Fisher,
@@ -80,9 +85,8 @@ At time of writing, large language models (LLMs) are beginning to obtain the abi
 What implications does this have for our profession?
 In this \documentname{},
 I list---and argue for---a set of facts or ``points of agreement'' about what astrophysics is, or should be.
-I discuss a set of putative benefits that astrophysics perhaps brings to us, and to science, and to universities, and to the world.
-I conclude with possible policy recommendations, none of which I endorse.
-% [GREG] There's a dissonance between "possible" and the lack of endorsement. I'm wondering why they don't warrant your endorsement but they do warrant the time we'll spend presenting/reading about them.
+I list and discuss every possible benefit that astrophysics can be seen as bringing to us, and to science, and to universities, and to the world.
+I conclude with a discussion of possible policy recommendations, none of which I endorse.
 
 \section{Introduction}\label{sec:intro}
 This document is being written at a moment of very rapid change.
@@ -95,7 +99,6 @@ There are already conferences being set up in which all the papers are written, 
 There is evidence that a large fraction of submitted academic papers contain LLM-written text and the fraction seems to be growing with time \cite{paperslop}.
 This \documentname{} is inspired by this very rapid change.
 
-% [GREG] This section on the professionalization of astrophysics is one of my favorites. Very strong.
 There is another change happening in astrophysics, however, which is happening on a much longer time scale, but which is relevant:
 Astronomical data production is becoming extremely professionalized, and in a very particular way.
 An extreme example is the ESA \textsl{Gaia} Mission \cite{gaia}:
@@ -137,7 +140,6 @@ Not all of astrophysics is data science, not by a long shot!
 But a lot of it is, and the fraction is increasing every year.
 
 How are these two changes---LLM successes and the data-scientification---related?
-% [GREG] data-scientification? 
 They are related because \emph{contemporary LLMs can do data science}.
 It's true that there are many known limitations of present-day LLMs, for example in doing arithmetic \cite{arithmetic}, or in performing causal inferences \cite{causal}, but the models are improving by the week, and I think it is reasonable to expect that they will steadily become more competent at designing, executing, writing up, and criticizing scientific projects, at least for a while.
 There might be show-stoppers; we don't know yet.
@@ -148,9 +150,8 @@ All I am going to ask is: Why do we do astrophysics?
 I have the strong feeling that we will need to answer this question first, before we can answer questions about our relationships with LLMs and LLM-based projects.
 
 \section{Points of agreement}\label{sec:facts}
-We'll start here by stating some facts about astrophysics, or points on which we can all agree.
-Of course for each of these, there are many astrophysicists who will disagree.
-% [GREG] "facts", "we can all agree" vs "many... disagree". Is that because those astrophysicists are wrong? 
+We'll start here by stating some ``facts'' about astrophysics, or points on which we can all agree; ``points of agreement'' in what follows.
+Of course for each of these, there are astrophysicists who will disagree, because there are as many ideas of what astrophysics is as there are astrophysicists.
 But these form a set of assumptions from which I will try to flow my criticisms of policies or practices in \secref{sec:policy}.
 
 \paragraph{Astrophysics produces new knowledge about the Universe.}
@@ -160,10 +161,12 @@ That is, every project that counts as ``astrophysics'' involves scientific novel
 
 If you want to become an astrophysicist, it isn't sufficient to read about it, or take classes in it.
 You have to \emph{do it}, and \emph{doing it} requires doing novel things, that haven't been done before, and which connect to important scientific questions in the literature.
+It also involves (as I will discuss below) writing up and publishing what you did.
 
 It isn't even sufficient to repeat classic or known measurements.
 Part of becoming an astrophysicist is learning how to design and plan new kinds of measurements or new approaches or applying known techniques in new areas to make new discoveries.
-The novelty is explicitly part of the project; astrophysics isn't just techniques or results; it intrinsically involves innovation.
+It also involves situating, in writing, that novel work within the contemporary scientific literature.
+The novelty of the work is explicitly part of the project; astrophysics isn't just techniques or results; it intrinsically involves innovation.
 Astrophysics lives at the cutting edge,\footnote{%
 I owe a lot to Rosie Wyse (JHU), in general, but also in particular for making this point very clearly to me in a conversation in 2023.}
 not in the past.
@@ -173,13 +176,13 @@ It might sound trite to say that we do astrophysics for people.
 But the consequences of this are at least a little bit non-trivial:
 When we employ a graduate student to perform some work, it absolutely must be \emph{because the graduate student will benefit} from that work, not merely because that work needs to get done.
 This is one of the interpretations of the categorical imperative \cite{kant}, which is (to my mind) one of the few undeniably true principles or laws that have ever been written in the philosophical subject of ethics.
-% [GREG] I had to look up "categorical imperative". 
 
-I have heard it said, more than once, that an LLM can do some task ``better than a graduate student.''
-That language makes me uncomfortable, because it is taking an extremely \emph{instrumental} view of graduate students.
-% [GREG] I feel the discomfort, but I'm left wondering whether it is nonetheless true. LLM could be less error prone, impossible to discourage, undistracted, have a better grasp of fundamentals, are more articulate, better at taking criticism, etc. Long division: saying any computer is better at doing long division than any human isn't considered a slight to humans. But saying "any computer is better at long division that an eight-year-old" gets closer to the discomfort of the LLM vs grad student comparison because we understand that it is not the purpose of an eight-year-old to be good at long division. Their purpose, arguably any human's purpose, is to play and grow and learn and be and feel. What an LLM can't do "better than a grad student" is those things and we'd never expect it to. Long division and astrophysics are some of things we can spend our time on while we're here. You point out later all the ways that astrophysics has more going for it that long division.
-Are graduate students in our business \emph{to do work}?
-% [GREG] Maybe don't refer to it as "our business". To me, a business is an entity that produces good and services in exchange for some kind of benefit, usually payment. In the "business of science", it may be that graduate students are indeed cogs, instruments. I agree with you that we must reject the instrumental view of the world and embrace a more noble, humanistic view and focus on nurturing each other, especially as machines become increasingly good at things that we have always believed were part of what made us special BTW I like that you talk about other intelligences later.
+I have heard it said, more than once, in research contexts, that an LLM can do some task ``better than a graduate student.''
+That language makes me uncomfortable, because it is taking an extremely \emph{instrumental} view of graduate students.\footnote{%
+By far the most generous interpretation we can give to a comment involving the phrase ``better than a graduate student'' is something like what we mean when we say that a calculator does long division ``better than a seventh grader.''
+Seventh graders shouldn't be doing long division (except maybe to originally learn the concept).
+But I don't think this interpretation is correct, because the tasks about which this is said are tasks which, unlike seventh graders and long division, PhD students in astrophysics \emph{very much should be doing}, like writing code, reading literature, and visualizing results.}
+Are graduate students in our groups and our laboratories and our universities \emph{to do work}?
 Or are they here \emph{to learn}?
 I very much hope the latter, or, if they are here to work, it is because that work is also critical to their learning.
 We train PhD students not merely to amplify our own research programs, but to create opportunities, and specifically opportunities for them.
@@ -187,9 +190,7 @@ In general, it is possible to take a very instrumental view of the world, in whi
 It is important that we reject this view.
 Every person is a human being, whose personal development is more important than our short-term scientific accomplishments.\footnote{%
 One could make an argument that our \emph{long-term} scientific accomplishments---the theory of gravity, the discovery of dark matter, the possible future understanding of the origin of life or the discovery of life outside the Solar System----might be as important as people, in some sense.
-But individual things that PhD students are doing are way less important than those PhD students themselves.
-% [GREG] Also individuals can *choose* to sacrifice themselves in pursuit of those accomplishments. Many people have; most of them are not remembered. It's quite different to secretly think it's ok to sacrifice grad students "for the greater good" while at the same time leading them to believe that you're acting in their best interests. I really like what you say below about Utilitarianism vs. capitalism.
-}
+But individual things that PhD students are doing are way less important than those PhD students themselves.}
 
 You might object: But science is \emph{also} important!
 It is, perhaps, but see below my point about clinical value.
@@ -223,7 +224,6 @@ I believe that (in astrophysics) software is written to support the astrophysics
 That paper describes the intellectual contributions encoded in the software, and provides a standardized mechanism for tracing intellectual provenance, giving credit, and coordinating criticism.
 Maybe my position is radical now?
 But I believe that software is important in that it embodies and executes \emph{our ideas and beliefs} about astrophysics.
-% [GREG] Do LLMs embody and execute our ideas and beliefs about... everything in their training data?
 These ideas and beliefs are well gathered, disseminated, and preserved in the astrophysics literature.\footnote{%
 I should say here that I take the dissemination and preservation aspects of the literature more seriously than any other aspects.
 For this reason, I believe that \textsl{arXiv} is every bit as important as \textit{The Astrophysical Journal}.
@@ -232,9 +232,7 @@ Preserving and disseminating knowledge is never inexpensive.}
 
 Nothing we have has the track record that the traditional journals do for long-term dissemination and preservation of knowledge; we don't know what computing hardware platforms we will have in 15 years, let alone 200, but I can pretty-much guarantee that---if human civilization is still in existence---we will still be able to read Vera Rubin's papers about the dark matter (for example, \cite{vera}).\footnote{%
 A seriously off-topic comment is that with the the journals no longer having print (hard-copy) form, we are one small-scale war away from losing everything that astronomers have done this entire century.
-That's why my example paper is Vera Rubin's, not any of my students'.
-% [GREG] Off-off-topic: if all the literature is lost but the LLMs trained on the literature somehow survive, what exactly has survived? It's crazy how these models work and generate uncanny output but try asking Claude to list the 20 most influential papers in astrophysics in the last 50 years: author list, title and abstract as nearly as possible. Not only will the model not push back on the idea of "most influential" but, as you know, there will be all kinds of errors in the result. Of course, being able to faithfully reconstruct even a single important paper from memory is not a requirement we have of people either. So I don't know how to feel about all that.
-}
+That's why my example paper is Vera Rubin's, not any of my students'.}
 
 My point is that astrophysics \emph{is} the astrophysics literature.
 If you want to ask ``what is known about the structure of neutron stars?'' you ask the literature (scientific articles plus sometimes textbook chapters).
@@ -247,29 +245,24 @@ I will make a few small comments about this.
 The first is that astrophysics, like any science, contains a lot of ``implicit knowledge'' or folklore about things like how to observe, how to reduce data, how to organize projects, how to visualize data and models, how to read and write, and so on.
 Much of this never appears in the literature.
 Is that not also astrophysics?
-Yes it is, but it is \emph{astrophysics practice}.\footnote{I would welcome a project in which we tried to make much of this implicit knowledge explicit.
-% [GREG] Yeah, somebody really should write that book... There can be a chapter about mentoring grad students in the age of "smart machines".
-}
+Yes it is, but it is \emph{astrophysics practice}.\footnote{I would welcome a project in which we tried to make much of this implicit knowledge explicit.}
 The results of astrophysics---the scientific conclusions and debates---are in the literature.
 
 The second comment is that I often hear software (and hardware and engineering-oriented) people say that they ``have to'' write papers because papers---and the citations that they generate---are ``the coin of the realm.''\footnote{%
 I have heard C.~Titus Brown (UC Davis) present the requirements of traditional publishing as being at least marginally in conflict with open science and scientific open-source software development.}
 Papers (and the authorships on those papers) and the citations of those papers are not ``coin'' of anything!
-% [GREG] Do scientists never complain about having to write papers (more papers, more highly cited papers)? I'm not saying complaining about it is good for your health but there is real pressure to produce papers. It makes sense because, as you say, if you're not contributing to the astro lit, you aren't much of an astrophysicist.
 They represent our recording of what happened, what we learned, what we know, and how we know it.
 Citations deliver provenance, not reward.\footnote{%
 The authors on a paper should be those responsible for creating the results described in that paper.
 Papers should cite the papers that are relevant to their results---the papers they are criticizing or building on.
 Anything else unethically distorts the provenance of the ideas and work in our field.}
 All that said, and as will come up again in \secref{sec:policy}, it is true that publication counts and citation counts are heavily used in hiring, promotion, and grant-award decisions; citations may, effectively, be the coin of the realm even if I don't want them to be.
-% [GREG] Did you add this last sentence recently. I don't remember seeing this "concession" on my first read-through.
 One comment to make about authorship is that it is probably not the case that an LLM can be the author of a scientific paper.
 That is, it isn't really correct, if you use an LLM, to give that LLM co-authorship on your paper, any more than it is to give \textsl{astropy} \cite{astropy} or \textsl{GitHub copilot} or the \textsl{Mac} operating system coauthorship.
 Authors, because they are taking responsibility for their work, need to be the kinds of entities that can take responsibility for their work.
 Right now, LLMs can't take responsibility for anything, and they can't, later on, answer questions about why or how they did what they did (well they can, but not because they remembered it, only by reverse-engineering it).\footnote{%
-Things might get weirdly different if LLMs obtained very long-term memories.}
+Things might get weirdly different if LLMs obtained very long-term memories (which isn't obviously difficult to implement), but it still probably wouldn't address the point that, in their current form, none of the LLMs has any way to \emph{take responsibility} for anything.}
 HOGG IS THERE anything I can cite where an LLM HAS BEEN MADE a co-author?
-% [GREG] When I read this, I thought about the earlier passage about the professionalization of data gathering and how there's a lot you don't know about how those data sets are generated. When you use data from one of these big projects, who is responsible for the quality of the data? Why do you trust them? (Ah, I just scrolled down and here comes trust! Yeah!)
 
 Finally, because the astrophysics literature preserves provenance, it is ethically required that our papers cite the work that is relevant to the work we are doing.
 You can't decide not to cite a relevant paper because you don't like the author, or don't like the author's institution, or don't like their funding sources.\footnote{%
@@ -292,7 +285,6 @@ Thus we would have to do an enormous (and possibly unsustainable) amount of veri
 For the same reason that we must trust many entities in order to do our work,
 it is incumbent on us to \emph{build trust}.
 Open science, reproducibility, and collegiality all do this, and they all serve astrophysics well.
-% [GREG] What would an LLM have to do to earn your trust? Is it even possible for something that has no accountability, cannot take responsability or suffer consequences (career setbacks, humiliation) to be trustworthy? How is an LLM different from a corporation?
 
 \paragraph{We must use our resources efficiently.}
 Partly because we deliver no clinical value (see below), essentially all astrophysics grants and funding are \emph{gifts}.
@@ -311,7 +303,6 @@ After all, graduate students aren't \emph{labor} to be \emph{efficiently deploye
 The first person to clearly say this to me was Mike Blanton (Carnegie), during a conversation at NYU about the efficiency of the \textit{Sloan Digital Sky Survey IV}.}
 Graduate students are human beings, for whom we are supposed to be creating new opportunities.
 Importantly for what follows, however, if LLMs can do something important, efficiently, it is not obvious that we can just ignore that.
-% [GREG] The full-cost accounting of LLM effort vs human effort is, to say the least, challenging. So how can we decide which approach is a better use of resources? I guess your order of magnitude points later are part of the argument pro LLM.
 
 \paragraph{Correctness and rigor are paramount.}
 Astrophysics is an observational science.
@@ -335,7 +326,6 @@ We must test those assumptions and correct those mistakes, perhaps not immediate
 We must call out mistakes and criticize wrong results and bad assumptions, and we must re-do analyses that we believe to be flawed.
 If we stop doing things rigorously and correctly, we have stopped doing astrophysics.
 This is especially true in a science with \emph{no clinical value}:
-% [GREG] You're really teasing this one. I'm thinking "when will he dig into this"?
 If our results don't have direct application to the real world, that is, applications which effectively test our results, then shoddy or incorrect results can live on and lead to more wrong results downstream.
 
 \paragraph{We don't do astrophysics to \emph{find out the answers}:}
@@ -364,7 +354,6 @@ This all would be different, I believe, if astrophysics had clinical value:
 Then we would care about the detailed results, because, if they came out well, they would lead to new opportunities for humanity.
 
 \paragraph{Astrophysics has no clinical value.}
-% [GREG] At last! The most teased "agreement".
 I like to say that the sciences have a ``left edge'' which is about fundamental understanding, and understanding for understanding's sake.
 They also mostly have a ``right edge'' which is about what I like to call ``clinical value'' but you could call application or use in the world for technologies or policies.
 So, for example, biology has a left edge on which people understand how the cytoskeleton moves the cell, and a right edge in which they develop or improve therapies for cancer or cloudy toenails.
@@ -398,12 +387,17 @@ But, for the purposes of my arguments, this won't be the kind of right edge that
 One way to see this is that even if our detectors and satellites were useless to any other industry,
 we wouldn't use them differently, or do anything differently.
 Note the difference with biology: If we found that cancer could not ever be cured with biological resources, a large part of the study of biology would change overnight.
-After all, much of biology is justified in these right-edge terms.
-% [GREG] Isn't a lot of justification (grant proposals in bio) pretty performative? If you don't draw a line to the right-edge of whatever left-edge thing you're doing, no funding. Like aspirational clinical value.
+After all, much of biology is justified (albeit sometimes extremely performatively) in these right-edge terms.
 None of astrophysics is justified in these right-edge terms.
-% [GREG] Exactly. In astro, you don't have to pretend.
 No astronomer (that I know) is improving the calibration of \textsl{JWST} instruments because they want the US Navy to have a higher kill rate.\footnote{%
 The closest thing I can see in my own world to anyone making this argument is that the US funding agencies (NASA and NSF) explicitly prefer research proposals that develop technologies that could be transferred to commercial enterprises.}
+
+Another way to say all this is that astrophysics may occasionally and accidentally produce something useful.
+But astrophysics is not done (any more, in Western contexts\footnote{%
+In non-Western and ancient contexts, astronomy did have important use value in societies.
+I'll return to that point at the very end.})
+with the \emph{goal} of obtaining clinical or practical value.
+Clinical value is not part of the \emph{intent} or \emph{goal} of the work in astrophysics.\footnote{This teleological argument was brought to me by Andy Casey (Flatiron).}
 
 While I want to say, in this \sectionname, ``no clinical value,''
 I have to admit that there is one substantial clinical value of one sub-branch of astrophysics:
@@ -415,11 +409,9 @@ When I make the no-clinical-value argument I sometimes get the following:
 Since (as we said above) humanity loves astrophysics, it must be the case that it is clinically valuable!
 It must be that the clinical value lies in its feeding of humanity's love.\footnote{%
 Roger Blandford (Stanford) sometimes says that astrophysics provides ``hope'' to humanity \cite{hope}.
-% [GREG] Do you know if he meant "look at this tricky thing we're doing sort of for the sake of doing it despite all our flaws and tendancy to do dumb/violent things; there's hope for us" or "we keep learning more about our universe; who knows what we'll learn"
 Maybe that's a strong claim, but I don't think it is wrong.}
 But this is not truly a \emph{clinical} value in the following sense:
 In no way does this application of astrophysics depend on the correctness or values of the outcomes of astrophysics projects.
-% [GREG] Exactly. The hope is a function of the endeavour not the outcome. 
 For example, if biology learns something new about a protein interaction, that might directly affect a drug-development path.
 If that result turns out to be wrong, that drug-development path will fail.
 The clinical side of biology \emph{tests} biological results.
@@ -437,7 +429,6 @@ What do we deliver to the world?
 I am going to list all the things I know here, but (as you will see) I don't agree with all of them.
 When I say ``all the things I know,'' I really am attempting to be complete:
 I am trying to list here any benefit that any entity (person or organization) could feel or receive from any part (effort or result) in astrophysics.
-% [GREG] Again I feel this section intro is better than the first version I read. Maybe I'm imagining it.
 
 \paragraph{People love astronomy.}
 When I decided to work in astrophysics (which I did in the period 1990--1993), I remember my father saying that he felt like the area is a good one, because astronomy will always be studied by humanity, no matter what.
@@ -518,9 +509,9 @@ In addition to these tangible effects, astronomical projects sometimes also effe
 
 \paragraph{Astrophysics represents a borderless world.}
 I have spent a large fraction of my career working on different generations of the \textsl{Sloan Digital Sky Survey} \cite{sdss, sdssiii, sdssiv, sdssv}.
-These projects have become large, international collaborations with partners all over the globe.
+These projects have become large, international collaborations with partners all over the Globe.
 In the recent generations, institutions were invited to become partners in these projects without regard to national or geographic location, and indeed there are partners on multiple continents.
-Similarly, when we consider applicants for PhD programs, postdoctoral positions, and faculty jobs, we are open to applications from all over the world (although negatively constrained by visa or immigration requirements).\footnote{%
+Similarly, when astrophysicists consider applicants for PhD programs, postdoctoral positions, and faculty jobs, we are open to applications from all over the world (although negatively constrained by visa or immigration requirements).\footnote{%
 This is in stark contrast, by the way, to the scientific practice when I was an undergraduate.
 The cold war and the iron curtain split the world into (at least) two disjoint pieces, even scientifically.
 I met very few of my peers in China or Eastern Europe prior to 1992-ish.}
@@ -546,14 +537,12 @@ I agree!
 I opened with the challenge confronting astrophysics with the arrival of increasingly competent large language models.
 As I said, I won't end up actually making any policy recommendations here; this \documentname{} is a gathering of relevant ideas.
 I will, however, suggest two possible, extreme policies; and I will argue \emph{against} both of them.
-That is, I only have negative things to say about simple policies.
-% [GREG] The policies are both extreme and simple?
+That is, I only have negative things to say about simple policies---or at least about extreme policies.
 
 \paragraph{Let-them-cook:}
 One possible extreme policy proposal I could make (and, to be clear, I am \emph{not} making) is that we \emph{fully embrace} the LLMs, and encourage them (or even give them enormous resources\footnote{%
 One thing I have not addressed at all in this \documentname{} is the tremendous environmental impact of the training of LLMs, and their inferences (their execution as generative models working on prompts).
 The numbers are staggering.
-% [GREG] my point about using resources efficiently
 Of course it is important to remember that the human practice of astrophysics, at least in its current form, is also very damaging to the environment \cite{low-carbon, imperative, water}.\label{note:environment}})
 to conceive of, design, execute, write up, and submit (to the journals) novel astrophysics projects and papers.
 Under this policy, the vast, vast majority of astrophysics would be done by machines, and we (as a community of humans) would participate primarily through reading, vetting, and discussing the novel astrophysical results produced by those machines.
@@ -618,7 +607,7 @@ Literally the opposite of reproducible, plus they are constantly upgraded.\footn
 The irreversible upgrading of systems is anathema to reproducibility.
 For example the NASA \textsl{Horizons} system \url{https://ssd.jpl.nasa.gov/} that models the Solar System (for computing, for example, barycentric corrections for radial-velocity measurements and transit timing) is regularly upgraded without any preservation of past state, rendering almost every result in the observational study of exoplanets technically irreproducible.}
 The reproducibility point, on its own, might be killing for let-them-cook, at least with the LLMs in their current forms.
-% [GREG] How is the non-reproducibility you're talking how here different from the non-reproducibility in the "Correctness and rigor" section. There, it seemed to be something you could live with?
+Of course, as I commented in \secref{sec:facts}, there are many aspects of astrophysics that are not strictly reproducible, for very fundamental reasons.
 
 By the way, if it really is true that the LLMs, in a matter of years, could increase the size of the astrophysics literature by factors of thousands or millions,
 and if, in that scenario, almost all papers are written by LLMs and also read by LLMs,
@@ -667,7 +656,12 @@ I am not sure there is.
 And even if there is, I am not sure I can find it.
 And even if I can find it, I don't see how we, as a community, could agree to it (and even less police or enforce it).
 
-The only positive idea I have here is that transparency and disclosure are going to be important parts of whatever we do.
+One idea or rule of thumb is perhaps that we should or could interact with an LLM only in the same ways that we would interact with a non-coauthor colleague.\footnote{This suggestion came to me from Adrian Price-Whelan (Flatiron).}
+You might ask your colleague for help finding something in the literature, but you wouldn't ask your non-coauthor colleague to \emph{write the introduction} of the paper you are writing.
+You might ask your colleague to help speed up your code, but you wouldn't have your colleague write your code.
+I like these ideas; maybe they could evolve into conventions or community-supported best practices.
+
+The only strong positive position I can put forward here is that transparency and disclosure are going to be important parts of whatever we do.
 I think that's uncontroversial.
 A hotter take is that the disclosure requirements we adopt might become quite onerous, since the LLMs are (by construction) not reproducible.
 It might be that we must record and publish (in some form) every single complete LLM interaction we have in performing a scientific project.
@@ -681,6 +675,8 @@ I use them in my research, and especially to learn about programming languages a
 For this very \documentname, I used LLMs to learn some details about BibTeX formatting, and also get a summary of some ideas in animal rights (see above) and post-structuralist literary criticism (see below).
 
 HOGG: My position is that LLMs are pivoters of documentation. Use post-structuralism as the example.
+
+HOGG: GREG asks: What would an LLM have to do to earn your trust? Is it even possible for something that has no accountability, cannot take responsability or suffer consequences (career setbacks, humiliation) to be trustworthy? How is an LLM different from a corporation?
 
 While above I said that citations should \emph{not} be seen as the ``coin of the realm,'' in fact they \emph{are} very materially relevant:
 More highly published and more highly cited scholars, especially at early career stages, tend to fare better in job searches.
@@ -707,7 +703,7 @@ Obviously this is debatable, and perhaps the rise of the LLMs will lead to a rec
 Perhaps meaning is what is transmitted from the author's knowledge to the reader's knowledge.
 If the LLMs don't ``know'' anything, then, in this view, the documents they ``write'' might end up being meaningless.
 
-HOGG: IS THERE A FINAL CALL TO ACTION? I DON'T THINK SO.
+HOGG: Andy says: \textsl{For your final paragraph I think you should end on “why did I write this white paper”, which might include something about how there is a very diverse set of perspectives on LLMs in astronomy (just even within your circle). People have very strong and disparate views, and ultimately they are probably arguing about the wrong question of HOW we do astronomy when they should be asking WHY do we do astronomy.} I agree with that!
 
 \bibliography{why}
 
