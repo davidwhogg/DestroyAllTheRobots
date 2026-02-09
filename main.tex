@@ -5,8 +5,6 @@
 % - explicitly connect the effective altruism point to the instrumental view of astrophysicists.
 % - Connect the correctness and rigor point with the trust point.
 % - Contardo: Breaks the collective / community aspects of Astrophysics. Only three actors.
-% - Do we want a header on all pages?
-% - Is it ABSOLUTELY CLEAR why I object to let-them-cook?
 
 \documentclass{article}
 
@@ -14,6 +12,15 @@
 \usepackage[letterpaper, textheight=9.0in, textwidth=5.2in]{geometry}
 \usepackage{setspace}
 \setstretch{1.08}
+\usepackage{fancyhdr}
+\setlength{\topmargin}{0.0in}
+\setlength{\headheight}{3.0ex}\addtolength{\topmargin}{-0.5\headheight} % make room for headers
+\setlength{\headsep}{3.0ex}\addtolength{\topmargin}{-0.5\headsep}
+\pagestyle{fancy}
+%\renewcommand{\headrulewidth}{0.0pt}
+\fancyhf{}
+\fancyhead[L]{\sffamily Hogg / Why do we do astrophysics?}
+\fancyhead[R]{\sffamily\thepage}
 \sloppy\sloppypar\raggedbottom\frenchspacing
 \newcommand{\documentname}{\textsl{white paper}}
 \newcommand{\sectionname}{Section}
@@ -32,7 +39,7 @@
 \title{\bfseries Why do we do astrophysics?}
 \author{\textbf{David W. Hogg}\footnote{%
 David W. Hogg is in the Center for Cosmology and Particle Physics, Department of Physics, New York University; and in the Center for Computational Astronomy, Flatiron Institute; and at the Max-Planck-Institut f\"ur Astronomie, Heidelberg.}~\footnote{%
-The author thanks
+I am thankful to
   Roger Blandford (Stanford),
   Mike Blanton (Carnegie),
   Josh Bloom (Berkeley),
@@ -62,7 +69,7 @@ for discussion of the particular content of this \documentname.
 None of these people are responsible for any of the claims presented here.
 The Flatiron Institute is a division of the Simons Foundation.
 I acknowledge that the land politically designated as New York City is the homeland of the Lenape (Lenapehoking), who were unjustly displaced.}}
-\date{2026 February 6}
+\date{2026 February 9}
 
 \begin{document}
 
@@ -451,7 +458,7 @@ Therefore it is essential that universities have astrophysicists in faculty posi
 Inasmuch as the research university is a good idea, the training and hiring of astrophysicists, and the study of astrophysics, are all good ideas.
 
 \paragraph{We train a technical workforce.}
-Very few of my PhD students---and only a small fraction of all PhD students, globally---become research astrophysicists.
+Very few of my PhD students---and only a small fraction of all astrophysics PhD students, globally---become research astrophysicists.
 Most astrophysics PhD recipients obtain long-term careers in other technical professions, such as tech, finance, and engineering.
 Astrophysics, it turns out, is a very good training for quantitative professions that involve computational modeling.
 Thus astrophysics research produces very good people for technical innovation and growing our economy.
@@ -465,7 +472,7 @@ I've heard it said that a benefit of astrophysics is that, by employing astrophy
 I don't agree with this!}
 
 \paragraph{We educate the public.}
-The public---from undergraduates \emph{not} in the sciences to the television-watching public---are excited about astrophysics and want to learn more about it and more from it.
+The public---from undergraduates \emph{not} in the sciences to the television-watching and TikTok-swiping publics---are excited about astrophysics and want to learn more about it and more from it.
 I don't think it is an exaggeration to say that most members of society are interested in the beginning of the Universe, the properties of black holes, and the origin of life.
 Heck, we might even discover aliens some day.
 If the interests of the public matter, then we are doing something important to many, and contributing rich content to public education.
@@ -475,7 +482,7 @@ Every one of those instances is a huge success of research astrophysics, and con
 \paragraph{Physics needs astrophysics.}
 As mentioned above, there are many things we can't understand about physics without doing astrophysics.
 The highest vacuums, strongest electromagnetic fields, and largest length scales are only accessible astronomically.
-The theory of gravity was found and is entirely informed (except perhaps \cite{adelberger}) through astrophysics, including black holes, gravitational radiation, and accretion flows.
+The theory of gravity was found and is entirely informed (except perhaps in studies like \cite{adelberger}) through astrophysics, including black holes, gravitational radiation, and accretion flows.
 The dark matter and vacuum energy density---and whole dark sector, whatever it is---is detectable (so far) only through stellar and cosmological dynamics.
 Those are all aspects of fundamental physics that are available through astrophysics, and only astrophysics.
 
@@ -658,7 +665,7 @@ Plus, I am not a cop; ACAB.
 There must be!
 But I am not sure I can find it.
 And even if I can find it, I don't see how we, as a community, could agree to it (and even less police or enforce it).
-This isn't different from other ideas in scientific ethics (how can we agree on, police, and enforce ethical behavior);
+This isn't different from other ideas in scientific ethics (how can we agree on, police, and enforce ethical behavior?),
 but it \emph{feels different} because the LLMs are qualitatively more capable and more available than other kinds of ethically questionable scientific channels, and because they are (currently) so untrustworthy.
 
 One idea or rule of thumb is perhaps that we should or could interact with an LLM only in the same ways that we would interact with a non-coauthor colleague.\footnote{This suggestion is from Adrian Price-Whelan (Flatiron).}
@@ -684,7 +691,7 @@ I said at the beginning that LLMs are not ``AIs.''
 Because the LLMs are data-driven text-interpolators, I believe that their best and most useful role is in \emph{refactoring} or pivoting \emph{documentation}.
 For example, when I used an LLM (\textsl{Claude} in this case) to learn about post-structuralism, I asked about strains of thought in literary criticism.
 The LLM permitted me to do a kind of ``reverse look-up'' of that concept, starting at natural-language phrases like ``the idea that the meaning of a document is set by the reader, at the time of reading, not by the author, at the time of writing.''
-Once that worked, I worked through the Wikipedia page \cite{poststructuralism}, which is absolutely excellent.
+Once that gave me the word ``post-structuralism,'' I worked through the Wikipedia page \cite{poststructuralism}, which is absolutely excellent.
 
 \emph{Trust} is a critical idea among the points of agreement in \secref{sec:facts},
 and trust is also one of the main issues that practitioners bring up when they use or interact with the LLMs.
@@ -704,7 +711,7 @@ This point implicitly brings up the question: What would be different if we had 
 
 While above I said that citations should \emph{not} be seen as the ``coin of the realm,'' in fact they \emph{are} very materially relevant:
 More highly published and more highly cited scholars, especially at early career stages, tend to fare better in job searches.
-This makes sense because it is hard to assess the quality and impact of scientific work when that work is young and relatively untested; citation counts serve as proxy.
+This makes sense because it is hard to assess the quality and impact of scientific work when that work is young and relatively untested; publication and citation counts serve as proxy.
 Thus there will naturally be big pressures on scientists to use tools that speed analysis, writing, and publication.
 
 Everything written here has been about Western academic astrophysics.
@@ -721,7 +728,7 @@ I have made the strong---and possibly unrealistic---assumption that, over the ne
 Although people are using them to design, execute, and write up projects, in fact most of what the LLMs write is not currently excellent; it requires a lot of checking and revision and discarding (see, for example, \cite{bloomvibe}).
 Right now, the LLMs make only \emph{slop}, and a present-day scenario in which a high-performance deployment of LLMs generating $10^8$ submittable papers per year would produce horrifying nightmare of useless-to-damaging trash.
 Some of the generated papers would be novel, correct, and interesting perhaps, but it would be essentially impossible to find them, even armed with additional LLMs.
-There is every possibility that this ``LLM moment'' (some would say ``GenAI moment'') is a fad or a flash and we will look with pity upon any astronomer who spent time writing a 20-page white paper about them at the beginning of 2026.
+There is every possibility that this ``LLM moment'' (some would say ``GenAI moment'') is a fad or a flash and we will look with pity upon any astronomer who spent time writing a 20-page \documentname{} about them at the beginning of 2026.
 
 In putting together this \documentname, one objection I heard to the idea that LLMs could write papers is that human input is required to give documents \emph{meaning};\footnote{Phil Marshall (Stanford), private communication.}
 perhaps, for this reason, nothing a machine generates could have meaning?
@@ -730,13 +737,13 @@ But as appealing as this is, I believe this to be wrong.
 I am on the side of the post-structuralists:
 The meaning of a document is set---or almost entirely set---by the reader, or at the time of reading \cite{deadauthor}.
 Obviously this is debatable, and perhaps the rise of the LLMs will lead to a reconsideration of meaning.
-Perhaps meaning is what is transmitted from the author's knowledge to the reader's knowledge.
+Perhaps meaning involves that which is transmitted from the author's knowledge to the reader's knowledge.
 If the LLMs don't ``know'' anything, then, in this view, the documents they ``write'' might end up being meaningless.
 
 Finally: Why did I write this \documentname?
 I wrote this because I became concerned about some of the ideas circulating in the astrophysics community about LLMs and their capabilities, conflating what are (in my view) text-interpolators with what are (in my view) scientists.
 There is, obviously, a very wide range of opinions, within the responsible astrophysics community, about what LLMs are and how they can be used as tools (see \cite{ting} and \cite{trotta} for two very different but responsible perspectives).
-Ultimately, I think the real question we face is not the question of \emph{how} we do astrophysics.
+Ultimately, I think the real question we face---if indeed we do face a question---is not the question of \emph{how} we do astrophysics.
 It is the question of \emph{why} we do astrophysics.
 
 \bibliography{why}
