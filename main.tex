@@ -4,7 +4,7 @@
 % ----------------------------
 % - explicitly connect the effective altruism point to the instrumental view of astrophysicists.
 % - Connect the correctness and rigor point with the trust point.
-% - Contardo: Breaks the collective / community aspects of Astrophysics. Only three actors.
+% - Contardo says: LLMs break the collective / community aspects of astrophysics. Only three-ish actors.
 
 \documentclass{article}
 
@@ -36,9 +36,12 @@
 }
 \usepackage{url}
 
-\title{\bfseries Why do we do astrophysics?}
-\author{\textbf{David W. Hogg}\footnote{%
-David W. Hogg is in the Center for Cosmology and Particle Physics, Department of Physics, New York University; and in the Center for Computational Astronomy, Flatiron Institute; and at the Max-Planck-Institut f\"ur Astronomie, Heidelberg.}~\footnote{%
+\begin{document}
+
+\section*{\bfseries Why do we do astrophysics?}\thispagestyle{empty}
+\noindent{\textit{by} \textbf{David W. Hogg}\footnote{%
+The author is at the Center for Cosmology and Particle Physics, Department of Physics, New York University; and at the Center for Computational Astronomy, Flatiron Institute; and at the Max-Planck-Institut f\"ur Astronomie, Heidelberg.
+
 I am thankful to
   Roger Blandford (Stanford),
   Mike Blanton (Carnegie),
@@ -61,6 +64,7 @@ In addition I want to specifically thank
   Greg McDonald (Rum\&Code),
   David~R. McMillen (Toronto),
   Gautham Narayan (UIUC),
+  Monica Pate (NYU),
   Rix,
   Storey-Fisher,
   Soledad Villar (JHU),
@@ -69,19 +73,17 @@ for discussion of the particular content of this \documentname.
 None of these people are responsible for any of the claims presented here.
 The Flatiron Institute is a division of the Simons Foundation.
 I acknowledge that the land politically designated as New York City is the homeland of the Lenape (Lenapehoking), who were unjustly displaced.}}
-\date{2026 February 9}
-
-\begin{document}
-
-\maketitle
 
 \paragraph{Abstract:}
 At time of writing, large language models (LLMs) are beginning to obtain the ability to design, execute, write up, and referee scientific projects on the data-science side of astrophysics.
 What implications does this have for our profession?
 In this \documentname{},
-I list---and argue for---a set of facts or ``points of agreement'' about what astrophysics is, or should be.
-I then list and discuss every possible benefit that astrophysics can be seen as bringing to us, and to science, and to universities, and to the world.
-I conclude with a discussion of two possible (extreme) policy recommendations, neither of which I endorse.
+I list---and argue for---a set of facts or ``points of agreement'' about what astrophysics is, or should be;
+these include considerations about novelty, people-centrism, trust, and (the lack of) clinical value.
+I then list and discuss every possible benefit that astrophysics can be seen as bringing to us, and to science, and to universities, and to the world;
+these include considerations of love, development, and personal (and personnel) development.
+I conclude with a discussion of two possible (extreme) policy recommendations related to the use of LLMs in astrophysics, neither of which I endorse;
+it is not going to be easy to develop good policy recommendations. 
 
 \section{Introduction}\label{sec:intro}
 This document is being written at a moment of very rapid change.
@@ -104,7 +106,7 @@ Astronomical data production is becoming extremely professionalized, and in a ve
 An extreme example is the ESA \textsl{Gaia} Mission \cite{gaia}:
 Once the instrument was designed, the plans were moved inside the fence\footnote{I am using the phrase ``inside the fence'' to mean ``accessible only to those with governmental approval to work on weapons systems, that is, those with security clearances.''} at EADS, the European military contractor.
 EADS then figured out how to build it, built it, launched it, and operated it.
-No research-active astronomers were involved in any part of that operation; indeed even the scientific members of the \textsl{Gaia} Data Processing and Analysis Consortium (DPAC; \cite{dpac}) are in the position of having to reverse engineer the algorithms that made the on-board decisions (on the \textsl{Gaia} spacecraft) about what to window and telemeter to ground.
+No research-active astronomers were involved in any part of that operation; indeed even the scientific members of the \textsl{Gaia} Data Processing and Analysis Consortium (DPAC; \cite{dpac}) are in the position of having to reverse engineer some details of the on-board decisions (on the \textsl{Gaia} spacecraft) about what to window and telemeter to ground.
 Don't get me wrong: \textsl{Gaia} has been incredibly important to global astrophysics (and my own research program); it is probably the most productive astrophysics space mission in science-per-dollar terms in the last decade; but it wasn't built or operated by \emph{astronomers}.\footnote{%
 I will use the words ``astronomer'' and ``astrophysicist'' almost interchangeably here. For me the distinction is soft, and related to \emph{intentions}:
 Astronomers want to measure things in the sky precisely. Astrophysicists want to derive physical insights from those measurements.
@@ -112,7 +114,7 @@ Most of us do a bit of both (I hope).
 Both astronomers and astrophysicists contribute to and criticize the scientific literature. One could object to my claim that \textsl{Gaia} was not built by astronomers by saying that any employee of EADS who worked on \textsl{Gaia} is obviously an astronomer:
 They built a telescope!
 But they are not astronomers in the sense of contributing to and criticizing the astronomical literature.
-Indeed, most employees at EADS are not permitted to discuss their work in public, because their work relates to weapons systems.}
+Indeed, some employees at EADS are not even permitted to discuss their work in public, because their work relates to weapons systems.}
 Astronomers, in the case of \textsl{Gaia}, are just end users; end users of curated, calibrated data, delivered by a combination of the (secret) spacecraft and the (absolutely great, professional, and open) DPAC.
 
 The \textsl{Gaia} Mission is an extreme example, but many large projects are in this category, in one way or another:
@@ -209,7 +211,11 @@ Another interesting possible consequence is that \emph{scientific embargoes migh
 After all, how does stopping early-career scientists from talking publicly about their work serve \emph{their} interests?
 I have a strong feeling that there are also important consequences here for the structure of qualifying exams and interviews and other gates in our educational, hiring, and promotion systems, which are all laden in old traditions.
 
-One weird comment to make here is that, when I say that ``people'' are always the ends, I don't mean to be human-centric.
+Much of what I have written here is about students, but it applies more broadly.
+Indeed it applies to everyone in the scientific enterprise,
+including all researchers, from junior to senior.
+Every scientific paper is written to help all of its writers, and all of its readers, learn and grow, no matter their career stages.
+Thinking \emph{even more broadly}, when I say that ``people'' are always the ends, I don't mean to be human-centric.
 If we started doing astrophysics with deep-ocean octopuses,
 or extra-terrestrial intelligences,
 or truly intelligent machines, I think it is probably the case that those other intelligent entities probably also would have to be the ends, and not merely the means of our work.\footnote{%
@@ -281,6 +287,7 @@ You can't do science if you don't live within a network of trust.
 This point is extremely general: You have to trust your coauthors, you have to trust the literature, and you have to trust the machinery and tools that you use.\footnote{%
 This point has been made strongly to me many times by Mike Blanton (Carnegie), who gives a lot of credit to Oppenheimer \cite{oppy}.}
 Obviously a critical part of science is testing and verifying the tools and the literature and the work we do.
+Every paper we write does some partial verification of different parts of the scientific environment in which we work; we develop our trust as we work, and deliver effective verifications of different components to ourselves and others.
 But it is impossible for an investigator to test and verify everything; the untested things must be trusted.
 It would be very difficult to do astrophysics in a context in which there is a large part of the literature that we don't trust:
 We would be required to cite it---citing relevant work is ethically required---but you can't cite things you don't trust.
@@ -315,12 +322,9 @@ We observe the Universe as it is, with the photons that happen to enter the aper
 Thus exact reproducibility is difficult, and some observations cannot be verified, no matter what we do.\footnote{%
 For example, the very smallest, longest-period planets we found with the NASA \textsl{Kepler} Mission \cite{keplerresults} represent very low-amplitude, very rare photometric events.
 They are essentially impossible to confirm with any independent data, short of launching another \textsl{Kepler}-like mission.
-For another example, the NASA \textsl{WMAP} \cite{wmap} and ESA \textsl{Planck} \cite{planck} Missions measured everything that can be measured in the primary, scalar fluctuations in the cosmic microwave background.
-How can we tell whether these results are correct?
-Either we inspect their pipelines, or else we launch another billion-USD mission.
-If those points don't convince you, consider supernovae:
+If that isn't extreme enough, consider supernovae:
 No supernova ever repeats, so it would literally require a violation of Lorentz invariance to verify any observations, light echos \cite{lightecho} notwithstanding.}
-Thus we check or ``confirm'' most measurements in astrophysics primarily or partially \emph{by inspection}, inspection of the data and code that were taken and used in the generating the analysis and conclusions.
+Thus we check or ``confirm'' many measurements in astrophysics primarily or partially \emph{by inspection}, inspection of the data and code that were taken and used in the generating the analysis and conclusions.
 
 The only authority we have for such confirmation lies in methodological domains adjacent to astronomy:
 We rely on optics, mechanical engineering, remote sensing, statistics, and---very importantly---applied mathematics.
@@ -407,7 +411,9 @@ While I want to say, in this \sectionname, ``no clinical value,''
 I have to admit that there is one substantial clinical value of one sub-branch of astrophysics:
 The search for Earth-crossing asteroids might potentially, some day, save humanity from an enormous disaster.
 I think this is niche enough to leave my main point untouched,
-but I do have to admit that the work we do on instrument calibration and the detection of faint, moving objects (my own contribution here being \cite{undetectable}) could deliver enormous, direct benefits for humanity some day.
+but I do have to admit that the work we do on instrument calibration and the detection of faint, moving objects (my own contribution here being \cite{undetectable}) could deliver enormous, direct benefits for humanity some day.\footnote{%
+Kate Storey-Fisher (Stanford) pointed this out to me and also quipped that it probably isn't really a clinical value, however,
+since if we discover an asteroid on an Earth-collision trajectory we will probably all just ignore it anyway; see \cite{dontlook}.}
 
 When I make the no-clinical-value argument I sometimes get the following:
 Since (as we said above) humanity loves astrophysics, it must be the case that it is clinically valuable!
@@ -537,7 +543,7 @@ Borders hinder, not help, the most important human activities and achievements.
 \paragraph{Astrophysics is a satisfying activity.}
 Finally, of course, \emph{astrophysics is fun}.
 Most of us get involved because we are curious and like to solve problems and to build and do things.
-The discovery of an object, the making of a measurement, the execution of a pipeline, the submission of a manuscript are all exciting and rewarding in themselves.
+The discovery of an object, the making of a measurement, the execution of a pipeline, the submission of a manuscript are all exciting and rewarding in themselves, and help us grow.
 It is exciting to be a part of the community that figures out how the Universe works.
 2019 Nobel Laureate Jim Peebles often speaks of the great success of ``curiosity-driven research'' in creating the empirical and theoretical bases for the physical model of cosmology that is ascendent today \cite{curiosity}.
 I agree!
@@ -721,7 +727,7 @@ Also, for many civilizations, astronomy \emph{did} have important clinical value
 Astronomical observations were used to develop navigation technologies (especially over oceans \cite{navigation}),
 to deliver timing for planting and harvesting operations,
 and to record in reproducible form various calendar events, like birth months.\footnote{%
-Astronomers like to hate on astrology, but astrological signs (when they are properly maintained in terms of the Sun's actual angular location among the constellations) can be seen as a coordinate-free, universally accessible, and reproducible record of the time of year, divorced from state power.}
+Astronomers like to hate on astrology, but astrological signs (when they are properly maintained in terms of the Sun's actual angular location among the constellations) can be seen as a coordinate-free, universally accessible, reproducible record of the time of year, divorced from state power.}
 Astronomy provides a universally visible set of clocks that create and support opportunities across a wide range of human activities.
 
 I have made the strong---and possibly unrealistic---assumption that, over the next months and years, the LLMs will get \emph{far better}.
@@ -743,7 +749,7 @@ If the LLMs don't ``know'' anything, then, in this view, the documents they ``wr
 Finally: Why did I write this \documentname?
 I wrote this because I became concerned about some of the ideas circulating in the astrophysics community about LLMs and their capabilities, conflating what are (in my view) text-interpolators with what are (in my view) scientists.
 There is, obviously, a very wide range of opinions, within the responsible astrophysics community, about what LLMs are and how they can be used as tools (see \cite{ting} and \cite{trotta} for two very different but responsible perspectives).
-Ultimately, I think the real question we face---if indeed we do face a question---is not the question of \emph{how} we do astrophysics.
+Ultimately, I think the real question we face---if we do indeed face a question---is not the question of \emph{how} we do astrophysics.
 It is the question of \emph{why} we do astrophysics.
 
 \bibliography{why}
